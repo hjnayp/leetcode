@@ -1,4 +1,4 @@
-using source.structs;
+using source.Structs;
 
 namespace source._0000._02;
 
@@ -7,12 +7,12 @@ public class Solution
     public ListNode? AddTwoNumbers(ListNode? l1, ListNode? l2)
     {
         var head = new ListNode();
-        var cur = head;
+        ListNode? cur = head;
         var carry = 0;
 
         while (l1 != null || l2 != null || carry > 0)
         {
-            var sum = carry;
+            int sum = carry;
             sum += l1?.val ?? 0;
             sum += l2?.val ?? 0;
 

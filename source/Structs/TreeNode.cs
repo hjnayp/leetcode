@@ -1,4 +1,4 @@
-namespace source.structs;
+namespace source.Structs;
 
 public class TreeNode
 {
@@ -18,15 +18,15 @@ public class TreeNode
         var nodes = new List<TreeNode?>(list.Count);
         nodes.AddRange(list.Select(val => val.HasValue ? new TreeNode(val.Value) : null));
 
-        var n = nodes.Count;
+        int n = nodes.Count;
         for (var i = 0; i < n; ++i)
         {
-            var node = nodes[i];
+            TreeNode? node = nodes[i];
             if (node == null)
                 continue;
 
-            var left_index = 2 * i + 1;
-            var right_index = 2 * i + 2;
+            int left_index = 2 * i + 1;
+            int right_index = 2 * i + 2;
             node.left = left_index < n ? nodes[left_index] : null;
             node.right = right_index < n ? nodes[right_index] : null;
         }
@@ -41,7 +41,7 @@ public class TreeNode
         queue.Enqueue(node);
         while (queue.Any())
         {
-            var next_node = queue.Dequeue();
+            TreeNode? next_node = queue.Dequeue();
             if (next_node == null)
             {
                 list.Add(null);

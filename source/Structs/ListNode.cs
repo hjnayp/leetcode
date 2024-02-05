@@ -1,4 +1,4 @@
-namespace source.structs;
+namespace source.Structs;
 
 public class ListNode
 {

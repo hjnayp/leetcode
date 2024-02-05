@@ -1,4 +1,4 @@
-using source.structs;
+using source.Structs;
 
 namespace source._1000._1038;
 
