@@ -4,7 +4,7 @@ public class Solution
 {
     public int RemoveElement(int[] nums, int val)
     {
-        var p = nums.Length;
+        int p = nums.Length;
         for (var i = 0; i < p; ++i)
             if (nums[i] == val)
             {

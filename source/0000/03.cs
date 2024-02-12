@@ -10,7 +10,7 @@ public class Solution
         var set = new HashSet<char>();
         while (right < s.Length)
         {
-            var c = s[right];
+            char c = s[right];
             if (set.Add(c))
             {
                 ++right;

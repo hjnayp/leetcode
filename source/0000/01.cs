@@ -7,8 +7,8 @@ public class Solution
         var idx = new Dictionary<int, int>();
         for (var i = 0; i < nums.Length; ++i)
         {
-            var k = target - nums[i];
-            if (idx.TryGetValue(k, out var j))
+            int k = target - nums[i];
+            if (idx.TryGetValue(k, out int j))
                 return new[] { j, i };
             idx[nums[i]] = i;
         }

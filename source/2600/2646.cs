@@ -8,17 +8,17 @@ public class Solution
         for (var i = 0; i < n; ++i)
             graph.Add(new List<int>());
 
-        foreach (var edge in edges)
+        foreach (int[] edge in edges)
         {
             graph[edge[0]].Add(edge[1]);
             graph[edge[1]].Add(edge[0]);
         }
 
         var count = new int[n];
-        foreach (var trip in trips)
+        foreach (int[] trip in trips)
             Dfs(trip[0], -1, trip[1], count, graph);
 
-        var res = Dp(0, -1, count, price, graph);
+        int[] res = Dp(0, -1, count, price, graph);
         return Math.Min(res[0], res[1]);
     }
 
@@ -30,7 +30,7 @@ public class Solution
             return true;
         }
 
-        foreach (var child in graph[now])
+        foreach (int child in graph[now])
         {
             if (child == parent) continue;
             if (!Dfs(child, now, end, count, graph)) continue;
@@ -43,11 +43,11 @@ public class Solution
 
     private static int[] Dp(int now, int parent, IList<int> count, IList<int> price, IList<IList<int>> graph)
     {
-        var res = new[] { count[now] * price[now], count[now] * price[now] / 2 };
-        foreach (var child in graph[now])
+        int[] res = { count[now] * price[now], count[now] * price[now] / 2 };
+        foreach (int child in graph[now])
         {
             if (child == parent) continue;
-            var cost = Dp(child, now, count, price, graph);
+            int[] cost = Dp(child, now, count, price, graph);
             res[0] += Math.Min(cost[0], cost[1]);
             res[1] += cost[0];
         }
