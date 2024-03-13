@@ -2,6 +2,9 @@
 	<s:Boolean x:Key="/Default/Dpa/IsEnabledInDebug/@EntryValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/Environment/Highlighting/HighlightingEnabled/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingMode/@EntryValue">OnlyMarkers</s:String>
+	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=6527A63D_002D5D75_002D478D_002DAA55_002D18CC08F32C3A/@EntryIndexedValue">339D31D0-3384-4323-9BFA-F30E9E7D5F8E</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=069514fc_002D62f3_002D4ed0_002D99af_002D6f08de756a61/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NormalCase #2" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0300.Test304.NormalCase&lt;/TestId&gt;
@@ -20,9 +23,10 @@
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0400.Test418&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=27d2d2f3_002D4f2b_002D456d_002Dbd89_002Df9457efb30bc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NormalCase #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=27d2d2f3_002D4f2b_002D456d_002Dbd89_002Df9457efb30bc/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="NormalCase #3" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2867.NormalCase&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2864&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	
@@ -63,13 +67,14 @@
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2867.NormalCase&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c494279e_002D877a_002D4313_002Dbeea_002Dc2dbdc1de04e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=c494279e_002D877a_002D4313_002Dbeea_002Dc2dbdc1de04e/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Session" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
   &lt;TestAncestor&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0600.Test670&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2846.NormalCase&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2846&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._1600.Test1696.NormalCase&lt;/TestId&gt;
     &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2867.NormalCase&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2800.Test2864&lt;/TestId&gt;
   &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	</wpf:ResourceDictionary>

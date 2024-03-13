@@ -58,8 +58,7 @@ public class Solution
 
     private static void InitPrimes()
     {
-        if (isPrime is not null)
-            return;
+        if (isPrime is not null) return;
 
         isPrime = new bool[MaxNum];
         Array.Fill(isPrime, true);
