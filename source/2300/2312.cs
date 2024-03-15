@@ -14,28 +14,21 @@ public class Solution
         var memo = new long[m + 1, n + 1];
         for (var i = 0; i <= m; ++i)
         for (var j = 0; j <= n; ++j)
-            memo[i, j] = -1;
+            memo[i, j] = value.GetValueOrDefault(PairHash(i, j), 0);
 
-        return Dfs(m, n);
-
-        long Dfs(int a, int b)
+        for (var x = 1; x <= m; ++x)
+        for (var y = 1; y <= n; ++y)
         {
-            if (memo[m, n] > -1) return memo[m, n];
+            if (x > 1)
+                for (var i = 1; i < x / 2 + 1; ++i)
+                    memo[x, y] = Math.Max(memo[x, y], memo[i, y] + memo[x - i, y]);
 
-            long key = PairHash(a, b);
-            long res = value.GetValueOrDefault(key, 0);
-
-            if (a > 1)
-                for (var i = 1; i < a; ++i)
-                    res = Math.Max(res, Dfs(i, b) + Dfs(a - i, b));
-
-            if (b > 1)
-                for (var i = 1; i < b; ++i)
-                    res = Math.Max(res, Dfs(a, i) + Dfs(a, b - i));
-
-            memo[a, b] = res;
-            return res;
+            if (y > 1)
+                for (var j = 1; j < y / 2 + 1; ++j)
+                    memo[x, y] = Math.Max(memo[x, y], memo[x, j] + memo[x, y - j]);
         }
+
+        return memo[m, n];
 
         long PairHash(int a, int b)
         {
