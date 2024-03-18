@@ -6,8 +6,14 @@
 	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=6527A63D_002D5D75_002D478D_002DAA55_002D18CC08F32C3A/@EntryIndexedValue">339D31D0-3384-4323-9BFA-F30E9E7D5F8E</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4effdec7_002D2eaf_002D4f1f_002D8efb_002D94c53b6957b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="3" IsActive="True" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;Solution /&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=44572426_002D32ff_002D4f74_002D906d_002D321fc374bf1c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="NormalCase" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0300.Test310.NormalCase&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0300.Test310.NormalCase2&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=4effdec7_002D2eaf_002D4f1f_002D8efb_002D94c53b6957b8/@EntryIndexedValue">&lt;SessionState ContinuousTestingIsOn="True" ContinuousTestingMode="3" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;Solution /&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	
