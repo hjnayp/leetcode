@@ -4,13 +4,13 @@ public class Solution
 {
     public int FindPeakElement(int[] nums)
     {
-        var n = nums.Length;
-        var left = 0;
-        var right = n - 1;
+        int n = nums.Length;
+        int left = 0;
+        int right = n - 1;
 
         while (left <= right)
         {
-            var mid = left + (right - left) / 2;
+            int mid = left + (right - left) / 2;
             if (Less(mid + 1, mid) && Less(mid - 1, mid))
                 return mid;
 
@@ -24,8 +24,8 @@ public class Solution
 
         bool Less(int a, int b)
         {
-            var num_a = Get(a);
-            var num_b = Get(b);
+            Tuple<int, int> num_a = Get(a);
+            Tuple<int, int> num_b = Get(b);
 
             if (num_a.Item1 != num_b.Item1)
                 return num_a.Item1 < num_b.Item1;

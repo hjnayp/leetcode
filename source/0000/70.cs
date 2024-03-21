@@ -2,16 +2,16 @@ namespace source._0000._70;
 
 public class Solution
 {
-    private static readonly List<int> _cache = new() { 0, 1, 2 };
+    private static readonly List<int> s_Cache = new() { 0, 1, 2 };
 
     public int ClimbStairs(int n)
     {
-        if (n < _cache.Count)
-            return _cache[n];
+        if (n < s_Cache.Count)
+            return s_Cache[n];
 
-        for (int i = _cache.Count; i <= n; ++i)
-            _cache.Add(_cache[i - 1] + _cache[i - 2]);
+        for (int i = s_Cache.Count; i <= n; ++i)
+            s_Cache.Add(s_Cache[i - 1] + s_Cache[i - 2]);
 
-        return _cache[n];
+        return s_Cache[n];
     }
 }

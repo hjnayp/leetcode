@@ -13,8 +13,7 @@ public class Solution
 
         TreeNode? CreateTree(int inLeft, int inRight, int postLeft, int postRight)
         {
-            if (postLeft > postRight)
-                return null;
+            if (postLeft > postRight) return null;
 
             var root = new TreeNode(postorder[postRight]);
             int inRoot = pos[root.val];
