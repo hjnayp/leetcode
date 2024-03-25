@@ -9,7 +9,7 @@ public class FrequencyTracker
     {
         _frequency.Clear();
         _numbers.Clear();
-    }
+    }  
 
     public void Add(int number)
     {

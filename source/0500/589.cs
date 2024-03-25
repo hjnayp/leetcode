@@ -1,6 +1,6 @@
 using source.Structs;
 
-namespace test._0500;
+namespace test._0500._589;
 
 public class Solution
 {
