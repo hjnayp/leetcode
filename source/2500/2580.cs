@@ -7,7 +7,6 @@ public class Solution
         const int MOD = (int)(1e9 + 7);
         Array.Sort(ranges, (a, b) => a[0] - b[0]);
 
-
         int n = ranges.Length;
         long res = 1;
         for (var i = 0; i < n;)
