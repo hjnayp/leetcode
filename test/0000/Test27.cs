@@ -12,18 +12,25 @@ public class Test27
     [Timeout(1500)]
     public void NormalCase()
     {
-        int[] input_arr = { 3, 2, 2, 3 };
-        var input_val = 3;
+        int[] inputArr = { 3, 2, 2, 3 };
+        var inputVal = 3;
         int[] res = { 2, 2 };
-        int actual = new Solution().RemoveElement(input_arr, input_val);
+        int actual = new Solution().RemoveElement(inputArr, inputVal);
         Assert.AreEqual(res.Length, actual);
-        Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(input_arr, res, actual));
+        Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(inputArr, res, actual));
 
-        input_arr = new[] { 0, 1, 2, 2, 3, 0, 4, 2 };
-        input_val = 2;
+        inputArr = new[] { 0, 1, 2, 2, 3, 0, 4, 2 };
+        inputVal = 2;
         res = new[] { 0, 1, 4, 0, 3 };
-        actual = new Solution().RemoveElement(input_arr, input_val);
+        actual = new Solution().RemoveElement(inputArr, inputVal);
         Assert.AreEqual(res.Length, actual);
-        Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(input_arr, res, actual));
+        Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(inputArr, res, actual));
+
+        inputArr = new[] { 1, 2, 3, 3 };
+        inputVal = 3;
+        res = new[] { 1, 2 };
+        actual = new Solution().RemoveElement(inputArr, inputVal);
+        Assert.AreEqual(res.Length, actual);
+        Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(inputArr, res, actual));
     }
 }

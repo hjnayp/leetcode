@@ -11,8 +11,7 @@ public class Solution
                 while (p > i && nums[p - 1] == val)
                     --p;
 
-                if (p == i)
-                    break;
+                if (p == i) break;
 
                 nums[i] = nums[p-- - 1];
             }
