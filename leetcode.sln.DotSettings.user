@@ -25,6 +25,7 @@
     &lt;/And&gt;
     &lt;TestAncestor&gt;
       &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2500.Test2580&lt;/TestId&gt;
+      &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._1900.Test1997&lt;/TestId&gt;
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
