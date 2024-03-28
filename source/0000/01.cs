@@ -13,6 +13,6 @@ public class Solution
             idx[nums[i]] = i;
         }
 
-        return default;
+        return Array.Empty<int>();
     }
 }

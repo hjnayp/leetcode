@@ -12,6 +12,7 @@ public class ListNodeTest
     {
         ConvertArrayToListNode(new[] { 1, 2, 3 });
         ConvertArrayToListNode(new[] { 0, 3, 5 });
+        ConvertArrayToListNode(Array.Empty<int>());
     }
 
     [TestMethod]
@@ -19,13 +20,23 @@ public class ListNodeTest
     {
         ListNode? list1 = ListNode.FromArray(1, 2, 3);
         ListNode? list2 = ListNode.FromArray(1, 2, 3);
-        if (list1 != list2)
-            Assert.Fail();
+        Assert.IsTrue(list1 == list2);
 
         list1 = ListNode.FromArray(1, 2, 3);
         list2 = ListNode.FromArray(1, 2, 4);
-        if (list1 == list2)
-            Assert.Fail();
+        Assert.IsTrue(list1 != list2);
+    }
+
+    [TestMethod]
+    public void TestFields()
+    {
+        var listNode = new ListNode(1);
+        Assert.AreEqual(1, listNode.val);
+        Assert.IsNull(listNode.next);
+
+        var listNode2 = new ListNode(2, listNode);
+        Assert.AreEqual(2, listNode2.val);
+        Assert.AreEqual(listNode, listNode2.next);
     }
 
 

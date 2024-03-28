@@ -30,4 +30,15 @@ public class Test01
         actual = solution.TwoSum(nums, target);
         CollectionAssert.AreEqual(expected, actual);
     }
+
+    [TestMethod]
+    public void NoSolutionCase()
+    {
+        var solution = new Solution();
+        var nums = new[] { 2, 7, 11, 15 };
+        var target = 100;
+        int[] expected = Array.Empty<int>();
+        int[]? actual = solution.TwoSum(nums, target);
+        CollectionAssert.AreEqual(expected, actual);
+    }
 }
