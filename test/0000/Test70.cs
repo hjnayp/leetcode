@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._0000._70;
 
 namespace test._0000;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test70
 {
     [TestMethod]
@@ -11,7 +13,7 @@ public class Test70
     {
         var n = 2;
         var expected = 2;
-        var actual = new Solution().ClimbStairs(n);
+        int actual = new Solution().ClimbStairs(n);
         Assert.AreEqual(expected, actual);
 
         n = 3;

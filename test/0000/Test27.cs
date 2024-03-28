@@ -1,9 +1,11 @@
+using JetBrains.Annotations;
 using source._0000._27;
 using test.utils;
 
 namespace test._0000;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test27
 {
     [TestMethod]
@@ -13,7 +15,7 @@ public class Test27
         int[] input_arr = { 3, 2, 2, 3 };
         var input_val = 3;
         int[] res = { 2, 2 };
-        var actual = new Solution().RemoveElement(input_arr, input_val);
+        int actual = new Solution().RemoveElement(input_arr, input_val);
         Assert.AreEqual(res.Length, actual);
         Assert.IsTrue(VectorUtils.IsFirstKthElementsSame(input_arr, res, actual));
 

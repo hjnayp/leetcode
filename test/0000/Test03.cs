@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._0000._03;
 
 namespace test._0000;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test03
 {
     [TestMethod]
@@ -12,7 +14,7 @@ public class Test03
         var solution = new Solution();
         var s = "abcabcbb";
         var expected = 3;
-        var actual = solution.LengthOfLongestSubstring(s);
+        int actual = solution.LengthOfLongestSubstring(s);
         Assert.AreEqual(expected, actual);
 
         s = "bbbbb";
