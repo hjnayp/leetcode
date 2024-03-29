@@ -1,5 +1,8 @@
 namespace source._0000._03;
 
+/// <summary>
+///     https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/
+/// </summary>
 public class Solution
 {
     public int LengthOfLongestSubstring(string s)

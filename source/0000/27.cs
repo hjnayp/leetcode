@@ -1,5 +1,8 @@
 namespace source._0000._27;
 
+/// <summary>
+///     https://leetcode.cn/problems/remove-element/description/
+/// </summary>
 public class Solution
 {
     public int RemoveElement(int[] nums, int val)
@@ -12,7 +15,6 @@ public class Solution
                     --p;
 
                 if (p == i) break;
-
                 nums[i] = nums[p-- - 1];
             }
 

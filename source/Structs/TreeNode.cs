@@ -2,33 +2,23 @@ namespace source.Structs;
 
 public class TreeNode
 {
-    public TreeNode? left;
-    public TreeNode? right;
-    public int val;
-
-    public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
     public static TreeNode? CreateTreeWithList(IList<int?> list)
     {
+        if (list.Count == 0 || list[0] is null) return null;
         var nodes = new List<TreeNode?>(list.Count);
         nodes.AddRange(list.Select(val => val.HasValue ? new TreeNode(val.Value) : null));
 
-        int n = nodes.Count;
-        for (var i = 0; i < n; ++i)
+        var queue = new Queue<TreeNode>();
+        queue.Enqueue(nodes[0]!);
+        var i = 1;
+        int n = list.Count;
+        while (queue.Any())
         {
-            TreeNode? node = nodes[i];
-            if (node == null)
-                continue;
-
-            int left_index = 2 * i + 1;
-            int right_index = 2 * i + 2;
-            node.left = left_index < n ? nodes[left_index] : null;
-            node.right = right_index < n ? nodes[right_index] : null;
+            TreeNode node = queue.Dequeue();
+            node.left = i >= n ? null : nodes[i++];
+            node.right = i >= n ? null : nodes[i++];
+            if (node.left != null) queue.Enqueue(node.left);
+            if (node.right != null) queue.Enqueue(node.right);
         }
 
         return nodes[0];
@@ -41,16 +31,16 @@ public class TreeNode
         queue.Enqueue(node);
         while (queue.Any())
         {
-            TreeNode? next_node = queue.Dequeue();
-            if (next_node == null)
+            TreeNode? nextNode = queue.Dequeue();
+            if (nextNode is null)
             {
                 list.Add(null);
             }
             else
             {
-                list.Add(next_node.val);
-                queue.Enqueue(next_node.left);
-                queue.Enqueue(next_node.right);
+                list.Add(nextNode.val);
+                queue.Enqueue(nextNode.left);
+                queue.Enqueue(nextNode.right);
             }
         }
 
@@ -58,5 +48,16 @@ public class TreeNode
             list.RemoveAt(list.Count - 1);
 
         return list;
+    }
+
+    public TreeNode? left;
+    public TreeNode? right;
+    public int val;
+
+    public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
+    {
+        this.val = val;
+        this.left = left;
+        this.right = right;
     }
 }

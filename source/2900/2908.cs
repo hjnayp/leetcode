@@ -1,5 +1,8 @@
 namespace source._2900._2908;
 
+/// <summary>
+///     https://leetcode.cn/problems/minimum-sum-of-mountain-triplets-i/description
+/// </summary>
 public class Solution
 {
     public int MinimumSum(int[] nums)

@@ -2,12 +2,16 @@ using source.Structs;
 
 namespace source._0000._94;
 
+/// <summary>
+///     https://leetcode.cn/problems/binary-tree-inorder-traversal/description/
+/// </summary>
 public class Solution
 {
-    private List<int> _path = new();
+    private readonly List<int> _path = new();
 
     public IList<int> InorderTraversal(TreeNode root)
     {
+        _path.Clear();
         Traversal(root);
         return _path;
     }
