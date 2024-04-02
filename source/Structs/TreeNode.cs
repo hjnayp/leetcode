@@ -50,14 +50,27 @@ public class TreeNode
         return list;
     }
 
+    public int val;
     public TreeNode? left;
     public TreeNode? right;
-    public int val;
 
     public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
     {
         this.val = val;
         this.left = left;
         this.right = right;
+    }
+
+    public override bool Equals(object? obj)
+    {
+        if (obj is null || obj.GetType() != GetType()) return false;
+
+        var node = (TreeNode)obj;
+        return val == node.val && Equals(left, node.left) && Equals(right, node.right);
+    }
+
+    public override int GetHashCode()
+    {
+        return val.GetHashCode() ^ (left?.GetHashCode() ?? 0) ^ (right?.GetHashCode() ?? 0);
     }
 }
