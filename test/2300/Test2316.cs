@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._2300._2316;
 
 namespace test._2300;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2316
 {
     [TestMethod]
@@ -16,7 +18,7 @@ public class Test2316
             new[] { 0, 5 },
             new[] { 2, 4 },
             new[] { 1, 6 },
-            new[] { 5, 4 },
+            new[] { 5, 4 }
         };
 
         long actual = solution.CountPairs(n, edges);

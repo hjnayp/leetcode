@@ -2,29 +2,34 @@ using source.Structs;
 
 namespace source._0800;
 
+/// <summary>
+///     https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/
+/// </summary>
 public class Solution
 {
     public TreeNode? ConstructFromPrePost(int[] preorder, int[] postorder)
     {
-        var pos = new Dictionary<int, int>();
-        for (var i = 0; i < preorder.Length; i++)
-            pos[preorder[i]] = i;
+        int n = preorder.Length;
+        var posMap = new Dictionary<int, int>();
+        for (var i = 0; i < n; ++i)
+            posMap[postorder[i]] = i;
 
-        return CreateTree(0, preorder.Length - 1, 0, postorder.Length - 1);
+
+        return CreateTree(0, n - 1, 0, n - 1);
 
         TreeNode? CreateTree(int preLeft, int preRight, int postLeft, int postRight)
         {
-            if (postLeft > postRight)
-                return null;
+            if (preLeft > preRight) return null;
 
-            var root = new TreeNode(preorder[preLeft]);
-            if (preLeft == preRight)
-                return root;
+            var leftCnt = 0;
+            if (preLeft < preRight)
+                leftCnt = posMap[preorder[preLeft + 1]] - postLeft + 1;
 
-            int leftNum = pos[preorder[preLeft + 1]] - postLeft + 1;
-            root.left = CreateTree(preLeft + 1, preLeft + leftNum, postLeft, postLeft + leftNum - 1);
-            root.right = CreateTree(preLeft + leftNum + 1, preRight, postLeft + leftNum, postRight - 1);
-            return root;
+            return new TreeNode(
+                preorder[preLeft],
+                CreateTree(preLeft + 1, preLeft + leftCnt, postLeft, postLeft + leftCnt),
+                CreateTree(preLeft + leftCnt + 1, preRight, postLeft + leftCnt, postRight - 1)
+            );
         }
     }
 }

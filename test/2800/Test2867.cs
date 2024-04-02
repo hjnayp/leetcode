@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._2800._2867;
 
 namespace test._2800;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2867
 {
     [TestMethod]
@@ -15,7 +17,7 @@ public class Test2867
             new[] { 1, 2 },
             new[] { 1, 3 },
             new[] { 2, 4 },
-            new[] { 2, 5 },
+            new[] { 2, 5 }
         };
 
         long result = solution.CountPaths(n, edges);
@@ -27,7 +29,7 @@ public class Test2867
             new[] { 1, 3 },
             new[] { 2, 4 },
             new[] { 3, 5 },
-            new[] { 3, 6 },
+            new[] { 3, 6 }
         };
         n = 6;
         result = solution.CountPaths(n, edges);
@@ -37,7 +39,7 @@ public class Test2867
         {
             new[] { 1, 2 },
             new[] { 4, 1 },
-            new[] { 3, 4 },
+            new[] { 3, 4 }
         };
         n = 4;
         result = solution.CountPaths(n, edges);

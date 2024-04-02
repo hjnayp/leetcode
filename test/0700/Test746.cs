@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._0700._746;
 
 namespace test._0700;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test746
 {
     [TestMethod]

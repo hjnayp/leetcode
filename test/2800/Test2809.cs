@@ -1,11 +1,12 @@
+using JetBrains.Annotations;
 using source._2800._2809;
 
 namespace test._2800;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2809
 {
-
     [TestMethod]
     public void TestCase1()
     {

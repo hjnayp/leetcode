@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._2700._2736;
 
 namespace test._2700;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2736
 {
     [TestMethod]
@@ -15,11 +17,11 @@ public class Test2736
         {
             new[] { 4, 1 },
             new[] { 1, 3 },
-            new[] { 2, 5 },
+            new[] { 2, 5 }
         };
 
         var expected = new[] { 6, 10, 7 };
-        var actual = solution.MaximumSumQueries(nums1, nums2, queries);
+        int[] actual = solution.MaximumSumQueries(nums1, nums2, queries);
         CollectionAssert.AreEqual(expected, actual);
     }
 }

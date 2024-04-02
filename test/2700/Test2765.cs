@@ -1,11 +1,13 @@
+using JetBrains.Annotations;
 using source._2700._2765;
 
 namespace test._2700;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2765
 {
-    private Solution _solution = new();
+    private readonly Solution _solution = new();
 
     [TestMethod]
     public void NormalCase()
@@ -19,7 +21,7 @@ public class Test2765
     public void InvalidCase()
     {
         var nums = new[] { 21, 9, 5 };
-        var expected = -1;
+        int expected = -1;
         Assert.AreEqual(expected, _solution.AlternatingSubarray(nums));
     }
 }

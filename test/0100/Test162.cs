@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._0100._162;
 
 namespace test._0100;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test162
 {
     [TestMethod]
@@ -11,7 +13,7 @@ public class Test162
         var solution = new Solution();
         var input = new[] { 1, 2, 3, 1 };
         var expected = new HashSet<int> { 2 };
-        var actual = solution.FindPeakElement(input);
+        int actual = solution.FindPeakElement(input);
         Assert.IsTrue(expected.Contains(actual));
         expected.Clear();
 

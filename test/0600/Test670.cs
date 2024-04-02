@@ -1,11 +1,13 @@
+using JetBrains.Annotations;
 using source._0600._670;
 
 namespace test._0600;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test670
 {
-    private Solution _solution = new();
+    private readonly Solution _solution = new();
 
     [TestMethod]
     public void WrongCase()

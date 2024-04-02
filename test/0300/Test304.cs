@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._0300._304;
 
 namespace test._0300;
 
 [TestClass]
+[TestSubject(typeof(NumMatrix))]
 public class Test304
 {
     [TestMethod]
@@ -15,7 +17,7 @@ public class Test304
             new[] { 5, 6, 3, 2, 1 },
             new[] { 1, 2, 0, 1, 5 },
             new[] { 4, 1, 0, 1, 7 },
-            new[] { 1, 0, 3, 0, 5 },
+            new[] { 1, 0, 3, 0, 5 }
         };
         var solution = new NumMatrix(matrix);
 

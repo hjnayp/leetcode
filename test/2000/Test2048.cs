@@ -1,8 +1,10 @@
+using JetBrains.Annotations;
 using source._2000._2048;
 
 namespace test._2000;
 
 [TestClass]
+[TestSubject(typeof(Solution))]
 public class Test2048
 {
     [TestMethod]
@@ -12,7 +14,7 @@ public class Test2048
         var solution = new Solution();
         var n = 1;
         var expected = 22;
-        var actual = solution.NextBeautifulNumber(n);
+        int actual = solution.NextBeautifulNumber(n);
         Assert.AreEqual(expected, actual);
 
         n = 1000;

@@ -30,5 +30,9 @@ public class Test894
             TreeNode.CreateTreeWithList(new int?[] { 0, 0, 0 })
         };
         CollectionAssert.AreEquivalent(nodes, solution.AllPossibleFBT(n).ToArray());
+
+        n = 2;
+        nodes = new TreeNode?[] { };
+        CollectionAssert.AreEquivalent(nodes, solution.AllPossibleFBT(n).ToArray());
     }
 }
