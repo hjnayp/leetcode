@@ -2,6 +2,9 @@ using source.Structs;
 
 namespace source._0800._894;
 
+/// <summary>
+///     https://leetcode.cn/problems/all-possible-full-binary-trees/description
+/// </summary>
 public class Solution
 {
     public IList<TreeNode> AllPossibleFBT(int n)
