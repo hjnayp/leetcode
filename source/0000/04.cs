@@ -1,4 +1,4 @@
-namespace source._0000;
+namespace source._0000._04;
 
 /// <summary>
 ///     https://leetcode.cn/problems/median-of-two-sorted-arrays/description/
