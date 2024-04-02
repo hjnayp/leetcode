@@ -2,10 +2,12 @@ namespace source.Structs;
 
 public class Node
 {
-    public IList<Node> children;
+    public IList<Node> children = new List<Node>();
     public int val;
 
-    public Node() { }
+    public Node()
+    {
+    }
 
     public Node(int _val)
     {

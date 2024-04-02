@@ -24,32 +24,6 @@ public class TreeNode
         return nodes[0];
     }
 
-    public static List<int?> TransTreeToList(TreeNode? node)
-    {
-        var list = new List<int?>();
-        var queue = new Queue<TreeNode?>();
-        queue.Enqueue(node);
-        while (queue.Any())
-        {
-            TreeNode? nextNode = queue.Dequeue();
-            if (nextNode is null)
-            {
-                list.Add(null);
-            }
-            else
-            {
-                list.Add(nextNode.val);
-                queue.Enqueue(nextNode.left);
-                queue.Enqueue(nextNode.right);
-            }
-        }
-
-        while (list.Count > 0 && list[^1] == null)
-            list.RemoveAt(list.Count - 1);
-
-        return list;
-    }
-
     public int val;
     public TreeNode? left;
     public TreeNode? right;

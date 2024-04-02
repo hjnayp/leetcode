@@ -4,10 +4,11 @@ namespace source._0100._144;
 
 public class Solution
 {
-    private List<int> _path = new();
+    private readonly List<int> _path = new();
 
     public IList<int> PreorderTraversal(TreeNode root)
     {
+        _path.Clear();
         Dfs(root);
         return _path;
     }
