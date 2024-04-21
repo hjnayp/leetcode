@@ -53,7 +53,6 @@ public class Test1600
             case "death":
                 _throneInheritance.Death(param[0]);
                 break;
-
             case "getInheritanceOrder":
                 string[] result = _throneInheritance.GetInheritanceOrder().ToArray();
                 CollectionAssert.AreEqual(param, result);
