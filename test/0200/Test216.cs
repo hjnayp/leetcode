@@ -1,7 +1,7 @@
 ﻿using JetBrains.Annotations;
 using source._0200._216;
 
-namespace Test216;
+namespace test._0200;
 
 [TestClass]
 [TestSubject(typeof(Solution))]

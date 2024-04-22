@@ -22,15 +22,17 @@
 	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=6527A63D_002D5D75_002D478D_002DAA55_002D18CC08F32C3A/@EntryIndexedValue">339D31D0-3384-4323-9BFA-F30E9E7D5F8E</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f96ea28_002D8293_002D4b4e_002Dbc30_002D946500bac87c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="Test924" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
-  &lt;TestAncestor&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test924&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928.NormalCase&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928.NormalCase1&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2000.Test2007&lt;/TestId&gt;&#xD;
-    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::Test216.Test216&lt;/TestId&gt;&#xD;
-  &lt;/TestAncestor&gt;&#xD;
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=0f96ea28_002D8293_002D4b4e_002Dbc30_002D946500bac87c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="Test924" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
+  &lt;TestAncestor&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test924&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928.NormalCase&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928.NormalCase1&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0900.Test928&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._2000.Test2007&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._1800.Test1883.NormalCase&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._1800.Test1883&lt;/TestId&gt;
+    &lt;TestId&gt;MSTest::339D31D0-3384-4323-9BFA-F30E9E7D5F8E::net7.0::test._0300.Test377&lt;/TestId&gt;
+  &lt;/TestAncestor&gt;
 &lt;/SessionState&gt;</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=24dccc22_002D5c7c_002D4925_002D89d3_002D4796a612f5a5/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from Solution" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
   &lt;Solution /&gt;&#xD;
