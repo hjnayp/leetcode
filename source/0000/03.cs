@@ -1,7 +1,7 @@
 namespace source._0000._03;
 
 /// <summary>
-///     https://leetcode.cn/problems/longest-substring-without-repeating-characters/description/
+///     https://leetcode.cn/problems/longest-substring-without-repeating-characters
 /// </summary>
 public class Solution
 {

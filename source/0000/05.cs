@@ -1,7 +1,7 @@
 namespace source._0000._05;
 
 /// <summary>
-///     https://leetcode.cn/problems/longest-palindromic-substring/
+///     https://leetcode.cn/problems/longest-palindromic-substring
 /// </summary>
 public class Solution
 {

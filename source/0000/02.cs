@@ -3,7 +3,7 @@ using source.Structs;
 namespace source._0000._02;
 
 /// <summary>
-///     https://leetcode.cn/problems/add-two-numbers/description/
+///     https://leetcode.cn/problems/add-two-numbers
 /// </summary>
 public class Solution
 {
