@@ -7,9 +7,9 @@ public class Solution
 {
     public int LengthOfLongestSubstring(string s)
     {
-        var max = 0;
-        var left = 0;
-        var right = 0;
+        int max = 0;
+        int left = 0;
+        int right = 0;
         var set = new HashSet<char>();
         while (right < s.Length)
         {

@@ -11,7 +11,7 @@ public class Solution
     {
         var head = new ListNode();
         ListNode? cur = head;
-        var carry = 0;
+        int carry = 0;
 
         while (l1 != null || l2 != null || carry > 0)
         {

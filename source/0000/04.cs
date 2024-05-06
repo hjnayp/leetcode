@@ -17,8 +17,8 @@ public class Solution
 
         int FindKthValue(int k)
         {
-            var i = 0;
-            var j = 0;
+            int i = 0;
+            int j = 0;
             while (true)
             {
                 if (i == m) return nums2[j + k - 1];

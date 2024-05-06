@@ -8,7 +8,7 @@ public class Solution
     public int[]? TwoSum(int[] nums, int target)
     {
         var idx = new Dictionary<int, int>();
-        for (var i = 0; i < nums.Length; ++i)
+        for (int i = 0; i < nums.Length; ++i)
         {
             int k = target - nums[i];
             if (idx.TryGetValue(k, out int j))

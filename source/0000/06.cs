@@ -11,11 +11,11 @@ public class Solution
     {
         if (numRows == 1) return s;
         var rows = new StringBuilder[numRows];
-        for (var i = 0; i < numRows; i++)
+        for (int i = 0; i < numRows; i++)
             rows[i] = new StringBuilder();
 
-        var idx = 0;
-        var direction = 1;
+        int idx = 0;
+        int direction = 1;
         foreach (char c in s)
         {
             rows[idx].Append(c);
