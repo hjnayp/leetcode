@@ -1,9 +1,5 @@
-#region
-
 using JetBrains.Annotations;
 using source._2100._2105;
-
-#endregion
 
 namespace test._2100;
 

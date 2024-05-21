@@ -1,11 +1,7 @@
-#region
-
 using JetBrains.Annotations;
 using Solution1 = source._2500._2589.Solution1.Solution;
 using Solution2 = source._2500._2589.Solution2.Solution;
 using Solution3 = source._2500._2589.Solution3.Solution;
-
-#endregion
 
 namespace test._2500;
 
