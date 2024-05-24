@@ -4,7 +4,7 @@ namespace source._0100._145;
 
 public class Solution
 {
-    private List<int> _path = new();
+    private readonly List<int> _path = new();
 
     public IList<int> PostorderTraversal(TreeNode root)
     {
@@ -16,7 +16,9 @@ public class Solution
     private void Dfs(TreeNode? node)
     {
         if (node is null)
+        {
             return;
+        }
 
         Dfs(node.left);
         Dfs(node.right);

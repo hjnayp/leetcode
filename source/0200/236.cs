@@ -4,7 +4,7 @@ namespace source._0200._236;
 
 public class Solution
 {
-    private Dictionary<int, TreeNode> _parents = new();
+    private readonly Dictionary<int, TreeNode> _parents = new();
 
     public TreeNode LowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q)
     {
@@ -20,7 +20,10 @@ public class Solution
         while (q != _parents[q.val])
         {
             if (visited.ContainsKey(q.val))
+            {
                 return q;
+            }
+
             q = _parents[q.val];
         }
 
@@ -31,11 +34,18 @@ public class Solution
     {
         _parents[node.val] = parent;
         if (_parents.ContainsKey(p.val) && _parents.ContainsKey(q.val))
+        {
             return;
+        }
 
         if (node.left is not null)
+        {
             Dfs(node.left, node, p, q);
+        }
+
         if (node.right is not null)
+        {
             Dfs(node.right, node, p, q);
+        }
     }
 }

@@ -29,10 +29,14 @@ public class Solution
             result *= 10;
             result += digit;
             if (!isStartReading)
+            {
                 isStartReading = true;
+            }
 
             if (result > int.MaxValue)
+            {
                 return sign == 1 ? int.MaxValue : int.MinValue;
+            }
         }
 
         return (int)result * sign;

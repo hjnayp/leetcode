@@ -5,32 +5,32 @@ namespace source._0000._05;
 /// </summary>
 public class Solution
 {
+    private static bool IsStringPalindrome(int len, int l, int r, bool[,] dp, string s)
+    {
+        bool isPrevPalindrome = len == 2 || dp[l + 1, r - 1];
+        return isPrevPalindrome && s[l] == s[r];
+    }
+
     public string LongestPalindrome(string s)
     {
         int n = s.Length;
         bool[,] dp = new bool[n, n];
-        for (int i = 0; i < n; i++)
-            dp[i, i] = true;
+        for (int i = 0; i < n; i++) dp[i, i] = true;
 
         int maxLen = 1;
         int begin = 0;
 
-        for (int l = 2; l < n; ++l)
-        for (int i = 0; i < n; ++i)
+        for (int len = 2; len < n; ++len)
         {
-            int r = l + i - 1;
-            if (r >= n) break;
-
-            char left = s[i];
-            char right = s[r];
-
-            if (left == right && (l == 2 || dp[i + 1, r - 1]))
-                dp[i, r] = true;
-
-            if (dp[i, r] && l > maxLen)
+            for (int left = 0; left < n; ++left)
             {
-                maxLen = l;
-                begin = i;
+                int right = len + left - 1;
+                if (right >= n) break;
+                if (IsStringPalindrome(len, left, right, dp, s)) dp[left, right] = true;
+                if (!dp[left, right] || len <= maxLen) continue;
+
+                maxLen = len;
+                begin = left;
             }
         }
 

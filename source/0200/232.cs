@@ -2,8 +2,8 @@ namespace source._0200._232;
 
 public class MyQueue
 {
-    private Stack<int> _inStack = new();
-    private Stack<int> _outStack = new();
+    private readonly Stack<int> _inStack = new();
+    private readonly Stack<int> _outStack = new();
 
     public void Push(int x)
     {
@@ -13,7 +13,9 @@ public class MyQueue
     public int Pop()
     {
         if (_outStack.Count == 0)
+        {
             InToOut();
+        }
 
         return _outStack.Pop();
     }
@@ -21,7 +23,9 @@ public class MyQueue
     public int Peek()
     {
         if (_outStack.Count == 0)
+        {
             InToOut();
+        }
 
         return _outStack.Peek();
     }
@@ -34,6 +38,8 @@ public class MyQueue
     private void InToOut()
     {
         while (_inStack.Count > 0)
+        {
             _outStack.Push(_inStack.Pop());
+        }
     }
 }
