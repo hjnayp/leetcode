@@ -5,35 +5,42 @@ public class Solution
     public int MaximumLength(string s)
     {
         int len = s.Length;
-        var chs = new List<int>[26];
-        for (int i = 0; i < 26; ++i) chs[i] = new List<int>();
+        int[,] chs = new int[26, 3];
 
-        int cnt = 0;
-        for (int i = 0; i < len; ++i)
+
+        int j = 0;
+        for (int i = 0; i < len; i = j)
         {
-            ++cnt;
-            if (i + 1 != len && s[i] == s[i + 1]) continue;
+            while (j < len && s[i] == s[j]) ++j;
 
-            int c = s[i] - 'a';
-            chs[c].Add(cnt);
-            cnt = 0;
-            for (int j = chs[c].Count - 1; j > 0; --j)
+            int cnt = j - i;
+            int idx = s[i] - 'a';
+
+            if (cnt > chs[idx, 0])
             {
-                if (chs[c][j] <= chs[c][j - 1]) break;
-                (chs[c][j], chs[c][j - 1]) = (chs[c][j - 1], chs[c][j]);
+                chs[idx, 2] = chs[idx, 1];
+                chs[idx, 1] = chs[idx, 0];
+                chs[idx, 0] = cnt;
             }
-
-            if (chs[c].Count > 3) chs[c].RemoveAt(3);
+            else if (cnt > chs[idx, 1])
+            {
+                chs[idx, 2] = chs[idx, 1];
+                chs[idx, 1] = cnt;
+            }
+            else if (cnt > chs[idx, 2])
+            {
+                chs[idx, 2] = cnt;
+            }
         }
 
-        int res = -1;
-        foreach (List<int> chCntArr in chs)
+        int res = 0;
+        for (int i = 0; i < 26; ++i)
         {
-            if (chCntArr.Count > 0 && chCntArr[0] > 2) res = Math.Max(res, chCntArr[0] - 2);
-            if (chCntArr.Count > 1 && chCntArr[0] > 1) res = Math.Max(res, Math.Min(chCntArr[0] - 1, chCntArr[1]));
-            if (chCntArr.Count > 2) res = Math.Max(res, chCntArr[2]);
+            res = Math.Max(res, chs[i, 0] - 2);
+            res = Math.Max(res, Math.Min(chs[i, 0] - 1, chs[i, 1]));
+            res = Math.Max(res, chs[i, 2]);
         }
 
-        return res;
+        return res > 0 ? res : -1;
     }
 }
