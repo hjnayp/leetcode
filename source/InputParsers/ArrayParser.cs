@@ -1,6 +1,6 @@
-namespace source.InputHandlers;
+namespace source.InputParsers;
 
-public static class InputHandler
+public static class ArrayParser
 {
     /// <summary>
     ///     Convert the input string to an one-dimensional integer array
@@ -13,7 +13,7 @@ public static class InputHandler
     ///     input = "[2,0,0,0,0,0,2]"
     ///     return = new []{2,0,0,0,0,0,2}
     /// </example>
-    public static int[] HandleOneDimensionalArrayInput(string input)
+    public static int[] ParseOneDimensionalArray(string input)
     {
         return input.Trim('[', ']')
             .Split(',')
@@ -33,11 +33,11 @@ public static class InputHandler
     ///     input = "[[2,0,0,0,0,0,2],[1,2,3,4,5,6,7]]"
     ///     input = "[[]]"
     /// </example>
-    public static int[][] HandleTwoDimensionalArrayInput(string input)
+    public static int[][] ParseTwoDimensionalArray(string input)
     {
         return input.Trim('[', ']')
             .Split("],[")
-            .Select(HandleOneDimensionalArrayInput)
+            .Select(ParseOneDimensionalArray)
             .ToArray();
     }
 }

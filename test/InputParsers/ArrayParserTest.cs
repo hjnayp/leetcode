@@ -1,26 +1,26 @@
 using JetBrains.Annotations;
-using source.InputHandlers;
+using source.InputParsers;
 
-namespace test.InputHandlers;
+namespace test.InputParsers;
 
 [TestClass]
-[TestSubject(typeof(InputHandler))]
-public class InputHandlerTest
+[TestSubject(typeof(ArrayParser))]
+public class ArrayParserTest
 {
     [TestMethod]
     public void one_dimensional()
     {
         string input = "[2,0,0,0,0,0,2]";
         int[] output = new[] { 2, 0, 0, 0, 0, 0, 2 };
-        CollectionAssert.AreEqual(output, InputHandler.HandleOneDimensionalArrayInput(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
 
         input = "[1,2,3,4,5,6,7]";
         output = new[] { 1, 2, 3, 4, 5, 6, 7 };
-        CollectionAssert.AreEqual(output, InputHandler.HandleOneDimensionalArrayInput(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
 
         input = "[]";
         output = Array.Empty<int>();
-        CollectionAssert.AreEqual(output, InputHandler.HandleOneDimensionalArrayInput(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
     }
 
     [TestMethod]
@@ -32,7 +32,7 @@ public class InputHandlerTest
             new[] { 2, 0, 0, 0, 0, 0, 2 },
             new[] { 1, 2, 3, 4, 5, 6, 7 }
         };
-        int[][] result = InputHandler.HandleTwoDimensionalArrayInput(input);
+        int[][] result = ArrayParser.ParseTwoDimensionalArray(input);
         for (int i = 0; i < result.Length; i++)
         {
             CollectionAssert.AreEqual(output[i], result[i]);
@@ -40,7 +40,7 @@ public class InputHandlerTest
 
         input = "[[]]";
         output = new[] { Array.Empty<int>() };
-        result = InputHandler.HandleTwoDimensionalArrayInput(input);
+        result = ArrayParser.ParseTwoDimensionalArray(input);
         for (int i = 0; i < result.Length; i++)
         {
             CollectionAssert.AreEqual(output[i], result[i]);
