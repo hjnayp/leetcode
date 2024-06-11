@@ -13,12 +13,17 @@ public static class ArrayParser
     ///     input = "[2,0,0,0,0,0,2]"
     ///     return = new []{2,0,0,0,0,0,2}
     /// </example>
-    public static int[] ParseOneDimensionalArray(string input)
+    public static T[] ParseOneDimensionalArray<T>(string input)
     {
         return input.Trim('[', ']')
             .Split(',')
             .Where((s) => s != "")
-            .Select(int.Parse)
+            .Select((value) =>
+            {
+                value = value.Trim('\'');
+                value = value.Trim('"');
+                return (T)Convert.ChangeType(value, typeof(T));
+            })
             .ToArray();
     }
 
@@ -33,11 +38,11 @@ public static class ArrayParser
     ///     input = "[[2,0,0,0,0,0,2],[1,2,3,4,5,6,7]]"
     ///     input = "[[]]"
     /// </example>
-    public static int[][] ParseTwoDimensionalArray(string input)
+    public static T[][] ParseTwoDimensionalArray<T>(string input)
     {
         return input.Trim('[', ']')
             .Split("],[")
-            .Select(ParseOneDimensionalArray)
+            .Select(ParseOneDimensionalArray<T>)
             .ToArray();
     }
 }

@@ -12,7 +12,7 @@ public class Test312
     public void normal_case()
     {
         Solution s = new();
-        Assert.AreEqual(167, s.MaxCoins(ArrayParser.ParseOneDimensionalArray("[3,1,5,8]")));
-        Assert.AreEqual(10, s.MaxCoins(ArrayParser.ParseOneDimensionalArray("[1,5]")));
+        Assert.AreEqual(167, s.MaxCoins(ArrayParser.ParseOneDimensionalArray<int>("[3,1,5,8]")));
+        Assert.AreEqual(10, s.MaxCoins(ArrayParser.ParseOneDimensionalArray<int>("[1,5]")));
     }
 }

@@ -12,15 +12,15 @@ public class ArrayParserTest
     {
         string input = "[2,0,0,0,0,0,2]";
         int[] output = new[] { 2, 0, 0, 0, 0, 0, 2 };
-        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray<int>(input));
 
         input = "[1,2,3,4,5,6,7]";
         output = new[] { 1, 2, 3, 4, 5, 6, 7 };
-        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray<int>(input));
 
         input = "[]";
         output = Array.Empty<int>();
-        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray(input));
+        CollectionAssert.AreEqual(output, ArrayParser.ParseOneDimensionalArray<int>(input));
     }
 
     [TestMethod]
@@ -32,18 +32,26 @@ public class ArrayParserTest
             new[] { 2, 0, 0, 0, 0, 0, 2 },
             new[] { 1, 2, 3, 4, 5, 6, 7 }
         };
-        int[][] result = ArrayParser.ParseTwoDimensionalArray(input);
-        for (int i = 0; i < result.Length; i++)
-        {
-            CollectionAssert.AreEqual(output[i], result[i]);
-        }
+        int[][] result = ArrayParser.ParseTwoDimensionalArray<int>(input);
+        for (int i = 0; i < result.Length; i++) CollectionAssert.AreEqual(output[i], result[i]);
 
         input = "[[]]";
         output = new[] { Array.Empty<int>() };
-        result = ArrayParser.ParseTwoDimensionalArray(input);
-        for (int i = 0; i < result.Length; i++)
+        result = ArrayParser.ParseTwoDimensionalArray<int>(input);
+        for (int i = 0; i < result.Length; i++) CollectionAssert.AreEqual(output[i], result[i]);
+    }
+
+    [TestMethod]
+    public void char_type()
+    {
+        char[][] chars = ArrayParser.ParseTwoDimensionalArray<char>(
+            "[[X,.,.,X],[.,.,.,X],[.,.,.,X]]");
+        char[][] output = new[]
         {
-            CollectionAssert.AreEqual(output[i], result[i]);
-        }
+            new[] { 'X', '.', '.', 'X' },
+            new[] { '.', '.', '.', 'X' },
+            new[] { '.', '.', '.', 'X' }
+        };
+        for (int i = 0; i < chars.Length; i++) CollectionAssert.AreEqual(output[i], chars[i]);
     }
 }

@@ -21,8 +21,8 @@ public class Test3072
     private void Run(string input, string result)
     {
         var solution = new Solution();
-        int[] nums = ArrayParser.ParseOneDimensionalArray(input);
-        int[] expected = ArrayParser.ParseOneDimensionalArray(result);
+        int[] nums = ArrayParser.ParseOneDimensionalArray<int>(input);
+        int[] expected = ArrayParser.ParseOneDimensionalArray<int>(result);
         CollectionAssert.AreEqual(expected, solution.ResultArray(nums));
     }
 }

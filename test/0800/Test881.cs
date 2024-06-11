@@ -12,8 +12,8 @@ public class Test881
     public void normal_case()
     {
         Solution solution = new();
-        Assert.AreEqual(1, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray("[1,2]"), 3));
-        Assert.AreEqual(3, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray("[3,2,2,1]"), 3));
-        Assert.AreEqual(4, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray("[3,5,3,4]"), 5));
+        Assert.AreEqual(1, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray<int>("[1,2]"), 3));
+        Assert.AreEqual(3, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray<int>("[3,2,2,1]"), 3));
+        Assert.AreEqual(4, solution.NumRescueBoats(ArrayParser.ParseOneDimensionalArray<int>("[3,5,3,4]"), 5));
     }
 }
