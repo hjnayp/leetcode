@@ -4,61 +4,45 @@ public class Solution
 {
     public int RootCount(int[][] edges, int[][] guesses, int k)
     {
-        int n = edges.Length + 1;
-        var nodes = new List<List<int>>(n);
-        for (var i = 0; i < n; ++i)
-            nodes.Add(new List<int>());
+        IDictionary<int, IList<int>> graph = new Dictionary<int, IList<int>>();
         foreach (int[] edge in edges)
         {
-            int a = edge[0];
-            int b = edge[1];
-            nodes[a].Add(b);
-            nodes[b].Add(a);
+            int u = edge[0];
+            int v = edge[1];
+            graph.TryAdd(u, new List<int>());
+            graph.TryAdd(v, new List<int>());
+            graph[u].Add(v);
+            graph[v].Add(u);
         }
 
-        var guessSet = new HashSet<(int, int)>();
-        foreach (int[] guess in guesses)
-        {
-            int a = guess[0];
-            int b = guess[1];
-            guessSet.Add((a, b));
-        }
+        ISet<(int, int)> guessEdges = new HashSet<(int, int)>();
+        foreach (int[] guess in guesses) guessEdges.Add((guess[0], guess[1]));
 
-        var res = 0;
-        var correctGuess = 0;
-
+        int correctGuessCount = 0;
+        int validRootCount = 0;
         Dfs(0, -1);
-        ReDfs(0, -1, correctGuess);
-        return res;
+        ReDfs(0, -1, correctGuessCount);
+        return validRootCount;
 
-        void Dfs(int node, int from)
+        void Dfs(int node, int parentNode)
         {
-            foreach (int i in nodes[node])
+            foreach (int neighborNode in graph[node])
             {
-                if (i == from)
-                    continue;
-                correctGuess += guessSet.Contains((node, i)) ? 1 : 0;
-                Dfs(i, node);
+                if (neighborNode == parentNode) continue;
+                if (guessEdges.Contains((node, neighborNode))) ++correctGuessCount;
+                Dfs(neighborNode, node);
             }
         }
 
-        void ReDfs(int node, int from, int cnt)
+        void ReDfs(int node, int parentNode, int nowCorrectGuessCnt)
         {
-            if (cnt >= k)
-                ++res;
-
-            foreach (int i in nodes[node])
+            if (nowCorrectGuessCnt >= k) ++validRootCount;
+            foreach (int neighborNode in graph[node])
             {
-                if (i == from)
-                    continue;
-
-                int newCnt = cnt;
-                if (guessSet.Contains((node, i)))
-                    --newCnt;
-                if (guessSet.Contains((i, node)))
-                    ++newCnt;
-
-                ReDfs(i, node, newCnt);
+                if (neighborNode == parentNode) continue;
+                int correctGuessChangeCnt = (guessEdges.Contains((neighborNode, node)) ? 1 : 0) -
+                    (guessEdges.Contains((node, neighborNode)) ? 1 : 0);
+                ReDfs(neighborNode, node, nowCorrectGuessCnt + correctGuessChangeCnt);
             }
         }
     }
