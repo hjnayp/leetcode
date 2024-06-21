@@ -11,10 +11,10 @@ public class Test01
     [Timeout(1500)]
     public void NormalCase()
     {
-        var solution = new Solution();
-        var nums = new[] { 2, 7, 11, 15 };
-        var target = 9;
-        var expected = new[] { 0, 1 };
+        Solution solution = new();
+        int[] nums = { 2, 7, 11, 15 };
+        int target = 9;
+        int[] expected = { 0, 1 };
         int[]? actual = solution.TwoSum(nums, target);
         CollectionAssert.AreEqual(expected, actual);
 
@@ -34,9 +34,9 @@ public class Test01
     [TestMethod]
     public void NoSolutionCase()
     {
-        var solution = new Solution();
-        var nums = new[] { 2, 7, 11, 15 };
-        var target = 100;
+        Solution solution = new();
+        int[] nums = { 2, 7, 11, 15 };
+        int target = 100;
         int[] expected = Array.Empty<int>();
         int[]? actual = solution.TwoSum(nums, target);
         CollectionAssert.AreEqual(expected, actual);
