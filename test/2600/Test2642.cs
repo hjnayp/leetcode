@@ -9,6 +9,7 @@ namespace test._2600;
 [TestSubject(typeof(Floyd.Graph))]
 public class Test2642Floyd
 {
+    [Timeout(1000)]
     [TestMethod]
     public void Test()
     {
@@ -31,7 +32,7 @@ public static class TestRunner
 {
     public static void NormalCase<T>() where T : IGraph
     {
-        var solution = (T)Activator.CreateInstance(typeof(T), 4, new[]
+        T solution = (T)Activator.CreateInstance(typeof(T), 4, new[]
         {
             new[] { 0, 2, 5 },
             new[] { 0, 1, 2 },
