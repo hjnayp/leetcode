@@ -16,7 +16,7 @@ public class Solution
         return (FindKthValue(k1) + FindKthValue(k2)) / 2f;
 
         int FindKthValue(int k)
-        {
+        { 
             int i = 0;
             int j = 0;
             while (true)

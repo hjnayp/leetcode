@@ -9,14 +9,12 @@ public class Solution
     {
         int p = nums.Length;
         for (int i = 0; i < p; ++i)
-            if (nums[i] == val)
-            {
-                while (p > i && nums[p - 1] == val)
-                    --p;
-
-                if (p == i) break;
-                nums[i] = nums[p-- - 1];
-            }
+        {
+            if (nums[i] != val) continue;
+            while (p > i && nums[p - 1] == val) --p;
+            if (p == i) break;
+            nums[i] = nums[p-- - 1];
+        }
 
         return p;
     }

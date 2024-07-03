@@ -18,7 +18,9 @@ public class Solution
         {
             result += digits[^(i + 1)] * (long)Math.Pow(10, i);
             if (result is > int.MaxValue or < int.MinValue)
+            {
                 return 0;
+            }
         }
 
         return (int)result * sign;

@@ -14,7 +14,7 @@ public class Solution
             while (right < m && nums[right] >= i) right++;
             res = Math.Max(res, i * (right - left - 1));
 
-            if (left < 0 && right >= m) break;
+            if (left < 0 && right >= m) break; 
             i = Math.Max(left >= 0 ? nums[left] : -1, right < m ? nums[right] : -1);
             if (i == -1) break;
         }

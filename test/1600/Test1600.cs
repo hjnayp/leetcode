@@ -7,13 +7,13 @@ namespace test._1600;
 [TestSubject(typeof(ThroneInheritance))]
 public class Test1600
 {
-    private ThroneInheritance _throneInheritance;
+    private ThroneInheritance? _throneInheritance;
 
     [TestMethod]
     public void NormalCase()
     {
-        var commands = new[]
-        {
+        string[]? commands =
+        [
             "ThroneInheritance",
             "birth",
             "birth",
@@ -24,23 +24,43 @@ public class Test1600
             "getInheritanceOrder",
             "death",
             "getInheritanceOrder"
-        };
+        ];
+
         string?[][] parameters =
+        [
+            ["king"],
+            ["king", "andy"],
+            ["king", "bob"],
+            ["king", "catherine"],
+            ["andy", "matthew"],
+            ["bob", "alex"],
+            ["bob", "asha"],
+            [null],
+            ["bob"],
+            [null]
+        ];
+
+        string[]?[] results =
+        [
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            null,
+            ["king", "andy", "matthew", "bob", "alex", "asha", "catherine"],
+            null,
+            ["king", "andy", "matthew", "alex", "asha", "catherine"]
+        ];
+
+        for (int i = 0; i < commands.Length; i++)
         {
-            new[] { "king" },
-            new[] { "king", "andy" },
-            new[] { "king", "bob" },
-            new[] { "king", "catherine" },
-            new[] { "andy", "matthew" },
-            new[] { "bob", "alex" },
-            new[] { "bob", "asha" },
-            new string?[] { null },
-            new[] { "bob" },
-            new string?[] { null }
-        };
+            RunCommand(commands[i], parameters[i], results[i]);
+        }
     }
 
-    private void RunCommand(string command, string[] param)
+    private void RunCommand(string command, string?[] param, string[]? results)
     {
         switch (command)
         {
@@ -48,14 +68,14 @@ public class Test1600
                 _throneInheritance = new ThroneInheritance(param[0]);
                 break;
             case "birth":
-                _throneInheritance.Birth(param[0], param[1]);
+                _throneInheritance?.Birth(param[0], param[1]);
                 break;
             case "death":
-                _throneInheritance.Death(param[0]);
+                _throneInheritance?.Death(param[0]);
                 break;
             case "getInheritanceOrder":
-                string[] result = _throneInheritance.GetInheritanceOrder().ToArray();
-                CollectionAssert.AreEqual(param, result);
+                string[] result = _throneInheritance?.GetInheritanceOrder()?.ToArray() ?? [];
+                CollectionAssert.AreEqual(results, result);
                 break;
         }
     }

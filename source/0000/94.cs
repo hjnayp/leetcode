@@ -7,7 +7,7 @@ namespace source._0000._94;
 /// </summary>
 public class Solution
 {
-    private readonly List<int> _path = new();
+    private readonly List<int> _path = [];
 
     public IList<int> InorderTraversal(TreeNode root)
     {
@@ -18,8 +18,7 @@ public class Solution
 
     public void Traversal(TreeNode? node)
     {
-        if (node is null)
-            return;
+        if (node is null) return;
 
         Traversal(node.left);
         _path.Add(node.val);

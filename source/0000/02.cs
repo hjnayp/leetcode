@@ -9,7 +9,7 @@ public class Solution
 {
     public ListNode? AddTwoNumbers(ListNode? l1, ListNode? l2)
     {
-        var head = new ListNode();
+        ListNode head = new();
         ListNode? cur = head;
         int carry = 0;
 

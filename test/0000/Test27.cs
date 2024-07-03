@@ -1,6 +1,6 @@
 using JetBrains.Annotations;
 using source._0000._27;
-using test.utils;
+using source.utils;
 
 namespace test._0000;
 
@@ -13,7 +13,7 @@ public class Test27
     public void NormalCase()
     {
         int[] inputArr = { 3, 2, 2, 3 };
-        var inputVal = 3;
+        int inputVal = 3;
         int[] res = { 2, 2 };
         int actual = new Solution().RemoveElement(inputArr, inputVal);
         Assert.AreEqual(res.Length, actual);

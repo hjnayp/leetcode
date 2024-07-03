@@ -1,6 +1,6 @@
 using source.Structs;
 
-namespace test._0500._589;
+namespace source._0500._589;
 
 public class Solution
 {
@@ -13,11 +13,15 @@ public class Solution
         void Dfs(Node? node)
         {
             if (node is null)
+            {
                 return;
+            }
 
             res.Add(node.val);
             foreach (Node child in node.children)
+            {
                 Dfs(child);
+            }
         }
     }
 }

@@ -12,7 +12,9 @@ public class Solution
         if (numRows == 1) return s;
         var rows = new StringBuilder[numRows];
         for (int i = 0; i < numRows; i++)
+        {
             rows[i] = new StringBuilder();
+        }
 
         int idx = 0;
         int direction = 1;
@@ -21,12 +23,17 @@ public class Solution
             rows[idx].Append(c);
             idx += direction;
             if (idx == 0 || idx == numRows - 1)
+            {
                 direction = -direction;
+            }
         }
 
-        var res = new StringBuilder();
+        StringBuilder res = new StringBuilder();
         foreach (StringBuilder row in rows)
+        {
             res.Append(row);
+        }
+
         return res.ToString();
     }
 }

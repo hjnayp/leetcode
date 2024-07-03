@@ -35,7 +35,9 @@ public class Solution
 
             if (result > int.MaxValue)
             {
-                return sign == 1 ? int.MaxValue : int.MinValue;
+                return sign == 1
+                    ? int.MaxValue
+                    : int.MinValue;
             }
         }
 
