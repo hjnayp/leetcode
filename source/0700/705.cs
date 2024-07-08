@@ -9,20 +9,24 @@ public class MyHashSet
         return key % BASE;
     }
 
-    private List<List<int>> _data;
+    private readonly List<List<int>> _data;
 
     public MyHashSet()
     {
         _data = new List<List<int>>();
         for (int i = 0; i < BASE; ++i)
+        {
             _data.Add(new List<int>());
+        }
     }
 
     public void Add(int key)
     {
         int h = Hash(key);
         if (!_data[h].Contains(key))
+        {
             _data[h].Add(key);
+        }
     }
 
     public void Remove(int key)
