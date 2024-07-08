@@ -6,20 +6,22 @@ public class Solution
     {
         int n = grid.Length;
         for (int i = 0; i < grid.Length; i++)
+        for (int j = 0; j < grid[i].Length; j++)
         {
-            for (int j = 0; j < grid[i].Length; j++)
+            int value = grid[i][j];
+            switch (IsDiagonal(i, j))
             {
-                bool isDiagonal = i == j || i + j == n - 1;
-                int value = grid[i][j];
-                switch (isDiagonal)
-                {
-                    case true when value == 0:
-                    case false when value != 0:
-                        return false;
-                }
+                case true when value == 0:
+                case false when value != 0:
+                    return false;
             }
         }
 
         return true;
+
+        bool IsDiagonal(int i, int j)
+        {
+            return i == j || i + j == n - 1;
+        }
     }
 }
