@@ -1,19 +1,13 @@
 ﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
 	<s:Boolean x:Key="/Default/Environment/Highlighting/HighlightingEnabled/@EntryValue">False</s:Boolean>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingMode/@EntryValue">OnlyFullLine</s:String>
-	
-	
-	
-	
 	<s:Boolean x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/ShowAdvancedOptions/@EntryValue">True</s:Boolean>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=339D31D0_002D3384_002D4323_002D9BFA_002DF30E9E7D5F8E/@EntryIndexedValue">6527A63D-5D75-478D-AA55-18CC08F32C3A</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestProjectMapping/=6527A63D_002D5D75_002D478D_002DAA55_002D18CC08F32C3A/@EntryIndexedValue">339D31D0-3384-4323-9BFA-F30E9E7D5F8E</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/CreateUnitTestDialog/TestTemplateMapping/=MSTest/@EntryIndexedValue">d6790ab7-33c2-4425-b2c9-51480cd1a852</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=409c031e_002D6d9e_002D4b04_002D99fd_002Dfec7b645052b/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Project Location="/Users/nayun/Home/Leetcode/test" Presentation="&amp;lt;test&amp;gt;" /&gt;
-&lt;/SessionState&gt;</s:String>
-	
-	
-	
-	
-	</wpf:ResourceDictionary>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=409c031e_002D6d9e_002D4b04_002D99fd_002Dfec7b645052b/@EntryIndexedValue">
+		<SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from &amp;lt;test&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session">
+  			<Project Location="/Users/nayun/Home/Leetcode/test" Presentation="&amp;lt;test&amp;gt;" />
+		</SessionState>
+	</s:String>
+</wpf:ResourceDictionary>
