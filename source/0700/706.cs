@@ -13,65 +13,72 @@ public class MyHashMap
 
     private const int BASE = 769;
 
-    private static int GetHashCode(int key)
-    {
-        return key % BASE;
-    }
-
     private readonly List<List<KeyValue>?> _data = new(BASE);
 
     public MyHashMap()
     {
-        for (var i = 0; i < BASE; i++)
+        for (int i = 0; i < BASE; i++)
+        {
             _data.Add(new List<KeyValue>());
+        }
     }
 
     public void Put(int key, int value)
     {
         int hashcode = GetHashCode(key);
+        if (IsInvalidHashCode(hashcode)) return;
+
         List<KeyValue>? list = _data[hashcode];
-        if (list is null) return;
+        KeyValue? record = (from item in list
+                            where item.Item1 == key
+                            select item).FirstOrDefault();
 
-        foreach (KeyValue t in from t in list
-                               let item = t
-                               where item.Item1 == key
-                               select t)
+        if (record is null)
         {
-            t.Item2 = value;
-            return;
+            list?.Add(new KeyValue { Item1 = key, Item2 = value });
         }
-
-        list.Add(new KeyValue { Item1 = key, Item2 = value });
+        else
+        {
+            record.Item2 = value;
+        }
     }
 
     public int Get(int key)
     {
         int hashcode = GetHashCode(key);
+        if (IsInvalidHashCode(hashcode)) return -1;
+
         List<KeyValue>? list = _data[hashcode];
-        if (list is null) return -1;
+        KeyValue? record = (from item in list
+                            where item.Item1 == key
+                            select item).FirstOrDefault();
 
-        foreach (KeyValue t in from t in list
-                               let item = t
-                               where item.Item1 == key
-                               select t)
-            return t.Item2;
-
-        return -1;
+        return record?.Item2 ?? -1;
     }
 
     public void Remove(int key)
     {
         int hashcode = GetHashCode(key);
-        List<KeyValue>? list = _data[hashcode];
-        if (list is null) return;
+        if (IsInvalidHashCode(hashcode)) return;
 
-        foreach (KeyValue t in from t in list
-                               let item = t
-                               where item.Item1 == key
-                               select t)
+        List<KeyValue>? list = _data[hashcode];
+        KeyValue? record = (from item in list
+                            where item.Item1 == key
+                            select item).FirstOrDefault();
+
+        if (record is not null)
         {
-            list.Remove(t);
-            return;
+            list?.Remove(record);
         }
+    }
+
+    private static bool IsInvalidHashCode(int code)
+    {
+        return code is < 0 or >= BASE;
+    }
+
+    private static int GetHashCode(int key)
+    {
+        return key % BASE;
     }
 }
