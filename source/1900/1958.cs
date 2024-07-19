@@ -51,8 +51,7 @@ public class Solution
         bool IsPointInBoard((int, int) point)
         {
             if (point.Item1 < 0 || point.Item1 >= n) return false;
-            if (point.Item2 < 0 || point.Item2 >= n) return false;
-            return true;
+            return point.Item2 >= 0 && point.Item2 < n;
         }
     }
 }
