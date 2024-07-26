@@ -22,13 +22,14 @@ public class Solution
         {
             rows[idx].Append(c);
             idx += direction;
+            
             if (idx == 0 || idx == numRows - 1)
             {
                 direction = -direction;
             }
         }
 
-        StringBuilder res = new StringBuilder();
+        StringBuilder res = new();
         foreach (StringBuilder row in rows)
         {
             res.Append(row);

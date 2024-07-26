@@ -16,17 +16,29 @@ public class Solution
         return (FindKthValue(k1) + FindKthValue(k2)) / 2f;
 
         int FindKthValue(int k)
-        { 
+        {
             int i = 0;
             int j = 0;
             while (true)
             {
-                if (i == m) return nums2[j + k - 1];
-                if (j == n) return nums1[i + k - 1];
-                if (k == 1) return Math.Min(nums1[i], nums2[j]);
+                if (i == m)
+                {
+                    return nums2[j + k - 1];
+                }
+
+                if (j == n)
+                {
+                    return nums1[i + k - 1];
+                }
+
+                if (k == 1)
+                {
+                    return Math.Min(nums1[i], nums2[j]);
+                }
 
                 int idx1 = Math.Min(m - 1, i + k / 2 - 1);
                 int idx2 = Math.Min(n - 1, j + k / 2 - 1);
+                
                 if (nums1[idx1] <= nums2[idx2])
                 {
                     k -= idx1 - i + 1;
