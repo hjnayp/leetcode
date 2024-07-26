@@ -12,8 +12,9 @@ public class Solution
         int len = m + n;
         int k1 = (len + 1) / 2;
         int k2 = (len + 2) / 2;
-
-        return (FindKthValue(k1) + FindKthValue(k2)) / 2f;
+        float median = (FindKthValue(k1) + FindKthValue(k2)) / 2f;
+        
+        return median;
 
         int FindKthValue(int k)
         {
@@ -38,7 +39,7 @@ public class Solution
 
                 int idx1 = Math.Min(m - 1, i + k / 2 - 1);
                 int idx2 = Math.Min(n - 1, j + k / 2 - 1);
-                
+
                 if (nums1[idx1] <= nums2[idx2])
                 {
                     k -= idx1 - i + 1;
