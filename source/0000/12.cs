@@ -12,16 +12,16 @@ public class Solution
     
     public string IntToRoman(int num)
     {
-        StringBuilder sb = new();
+        StringBuilder romanStringBuilder = new();
         for (int i = 0; i < Values.Length; i++)
         {
             while (num >= Values[i])
             {
                 num -= Values[i];
-                sb.Append(Roman[i]);
+                romanStringBuilder.Append(Roman[i]);
             }
         }
 
-        return sb.ToString();
+        return romanStringBuilder.ToString();
     }
 }
