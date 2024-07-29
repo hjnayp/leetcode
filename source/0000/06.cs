@@ -18,11 +18,12 @@ public class Solution
 
         int idx = 0;
         int direction = 1;
+        
         foreach (char c in s)
         {
             rows[idx].Append(c);
             idx += direction;
-            
+
             if (idx == 0 || idx == numRows - 1)
             {
                 direction = -direction;

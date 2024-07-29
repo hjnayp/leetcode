@@ -16,13 +16,13 @@ public class Solution
             if (p[j - 1] == '*')
             {
                 substringMatchMatrix[i, j] = substringMatchMatrix[i, j]
-                    || substringMatchMatrix[i, j - 2] // zero match
-                    || (IsCharMatch(i, j - 1) && substringMatchMatrix[i - 1, j]);
+                                             || substringMatchMatrix[i, j - 2] // zero match
+                                             || (IsCharMatch(i, j - 1) && substringMatchMatrix[i - 1, j]);
             }
             else
             {
                 substringMatchMatrix[i, j] = substringMatchMatrix[i, j]
-                    || (IsCharMatch(i, j) && substringMatchMatrix[i - 1, j - 1]);
+                                             || (IsCharMatch(i, j) && substringMatchMatrix[i - 1, j - 1]);
             }
         }
 
