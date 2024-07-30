@@ -19,7 +19,7 @@ public class Solution
         {
             int right = len + left - 1;
             if (right >= n) break;
-            
+
             if (IsStringPalindrome(len, left, right, dp, s))
             {
                 dp[left, right] = true;

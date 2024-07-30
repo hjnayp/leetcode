@@ -13,7 +13,7 @@ public class Solution
         int k1 = (len + 1) / 2;
         int k2 = (len + 2) / 2;
         float median = (FindKthValue(k1) + FindKthValue(k2)) / 2f;
-        
+
         return median;
 
         int FindKthValue(int k)
