@@ -8,7 +8,7 @@ namespace test._0000;
 public class Test07
 {
     [TestMethod]
-    public void common_positive_input()
+    public void Common_Positive_Input()
     {
         var solution = new Solution();
         Assert.AreEqual(321, solution.Reverse(123));
@@ -17,7 +17,7 @@ public class Test07
     }
 
     [TestMethod]
-    public void common_negative_input()
+    public void Common_Negative_Input()
     {
         var solution = new Solution();
         Assert.AreEqual(-321, solution.Reverse(-123));
@@ -26,7 +26,7 @@ public class Test07
     }
 
     [TestMethod]
-    public void input_end_with_0()
+    public void Input_EndWith_0()
     {
         var solution = new Solution();
         Assert.AreEqual(21, solution.Reverse(120));
@@ -34,7 +34,7 @@ public class Test07
     }
 
     [TestMethod]
-    public void result_over_32int_range()
+    public void Result_Over_Int32_Range()
     {
         var solution = new Solution();
         int x = 1123456789;
@@ -43,7 +43,7 @@ public class Test07
     }
 
     [TestMethod]
-    public void min_int32_value_input()
+    public void Min_Int32_Value_Input()
     {
         var solution = new Solution();
         int x = -2147483648;
@@ -52,7 +52,7 @@ public class Test07
     }
 
     [TestMethod]
-    public void max_int32_value_input()
+    public void Max_Int32_Value_Input()
     {
         var solution = new Solution();
         int x = 2147483647;

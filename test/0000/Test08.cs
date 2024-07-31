@@ -8,7 +8,7 @@ namespace test._0000;
 public class Test08
 {
     [TestMethod]
-    public void common_case()
+    public void Common_Case()
     {
         var solution = new Solution();
         Assert.AreEqual(42, solution.MyAtoi("42"));
@@ -18,7 +18,7 @@ public class Test08
     }
 
     [TestMethod]
-    public void leading_zero_case()
+    public void LeadingZero()
     {
         var solution = new Solution();
         Assert.AreEqual(42, solution.MyAtoi("042"));
@@ -28,7 +28,7 @@ public class Test08
     }
 
     [TestMethod]
-    public void string_with_leading_space()
+    public void LeadingSpace()
     {
         var solution = new Solution();
         Assert.AreEqual(42, solution.MyAtoi("  042"));
@@ -39,7 +39,7 @@ public class Test08
     }
 
     [TestMethod]
-    public void string_with_invalid_character()
+    public void WithInvalidCharacter()
     {
         var solution = new Solution();
         Assert.AreEqual(42, solution.MyAtoi("  042-78965"));
@@ -51,7 +51,7 @@ public class Test08
     }
 
     [TestMethod]
-    public void int_range_edge()
+    public void RangeEdgeCase()
     {
         var solution = new Solution();
         Assert.AreEqual(2147483647, solution.MyAtoi("2147483647"));
