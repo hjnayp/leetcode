@@ -1,5 +1,8 @@
 namespace source.Lcp._40;
 
+/// <summary>
+///     https://leetcode.cn/problems/uOAnQW
+/// </summary>
 public class Solution
 {
     public int MaxmiumScore(int[] cards, int cnt)
@@ -28,7 +31,6 @@ public class Solution
             return scoreSum;
         }
 
-
         int maxScore = 0;
         int[] leftCards = cards.Skip(cnt).ToArray();
 
@@ -49,8 +51,7 @@ public class Solution
                 maxScore = Math.Max(maxScore, scoreSum - cards[minEvenIndex] + leftCards[firstOddCardIndex]);
             }
         }
-
-
+        
         return maxScore;
     }
 }
