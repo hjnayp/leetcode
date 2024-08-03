@@ -6,7 +6,7 @@ namespace test.Lcp;
 
 [TestClass]
 [TestSubject(typeof(Solution))]
-public class TestLcp61
+public class Test61
 {
     private Solution _solution = new();
 
