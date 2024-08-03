@@ -1,5 +1,8 @@
 ﻿namespace source._3100._3143;
 
+/// <summary>
+///     https://leetcode.cn/problems/maximum-points-inside-the-square
+/// </summary>
 public class Solution
 {
     private const int MaxSideLength = (int)1e9 + 1;
