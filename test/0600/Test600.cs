@@ -5,7 +5,7 @@ namespace test._0600;
 
 [TestClass]
 [TestSubject(typeof(Solution))]
-public class Teset600
+public class Test600
 {
     private readonly Solution solution = new();
 
