@@ -15,5 +15,6 @@ public class Test600
         Assert.AreEqual(5, solution.FindIntegers(5));
         Assert.AreEqual(2, solution.FindIntegers(1));
         Assert.AreEqual(3, solution.FindIntegers(2));
+        Assert.AreEqual(5, solution.FindIntegers(7));
     }
 }
