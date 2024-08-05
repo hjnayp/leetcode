@@ -5,7 +5,7 @@ namespace source._0600;
 /// </summary>
 public class Solution
 {
-    private static readonly int[] NonConsecutiveOnesCounts = CalculateNonConsecutiveOnesCount(32);
+    private static readonly int[] NonConsecutiveOnesCounts = CalculateNonConsecutiveOnesCount();
 
     public int FindIntegers(int n)
     {
@@ -40,19 +40,13 @@ public class Solution
         }
     }
 
-    private static int[] CalculateNonConsecutiveOnesCount(int bitLength)
+    private static int[] CalculateNonConsecutiveOnesCount()
     {
-        int[] counts = new int[bitLength];
-
-        if (bitLength <= 2)
-        {
-            Array.Fill(counts, 1);
-            return counts;
-        }
+        int[] counts = new int[32];
 
         counts[0] = 1;
         counts[1] = 1;
-        for (int i = 2; i < bitLength; ++i)
+        for (int i = 2; i < 32; ++i)
         {
             counts[i] = counts[i - 1] + counts[i - 2];
         }
