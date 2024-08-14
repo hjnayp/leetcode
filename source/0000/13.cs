@@ -27,7 +27,7 @@ public class Solution
                 'D' => 500,
                 'M' when previousChar == 'C' => 800,
                 'M' => 1000,
-                _ => 0
+                _ => throw new ArgumentOutOfRangeException("Invalid letter")
             };
 
             previousChar = ch;
