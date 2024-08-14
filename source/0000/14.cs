@@ -2,6 +2,9 @@ using System.Text;
 
 namespace source._0000._14;
 
+/// <summary>
+///     https://leetcode.cn/problems/longest-common-prefix
+/// </summary>
 public class Solution
 {
     public string LongestCommonPrefix(string[] strs)
