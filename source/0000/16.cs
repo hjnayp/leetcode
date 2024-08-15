@@ -1,5 +1,8 @@
 namespace source._0000._16;
 
+/// <summary>
+///     https://leetcode.cn/problems/3sum-closest
+/// </summary>
 public class Solution
 {
     public int ThreeSumClosest(int[] nums, int target)
