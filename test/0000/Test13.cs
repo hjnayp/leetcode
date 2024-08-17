@@ -7,6 +7,7 @@ namespace test._0000;
 public class Test13
 {
     private readonly Solution _solution = new();
+
     [TestMethod]
     public void NonePlaceBeforeCase()
     {
@@ -18,8 +19,11 @@ public class Test13
 
         s = "LVIII";
         Assert.AreEqual(58, _solution.RomanToInt(s));
+
+        s = "MDCLXVI";
+        Assert.AreEqual(1666, _solution.RomanToInt(s));
     }
-    
+
     [TestMethod]
     public void PlaceBeforeCase()
     {
@@ -40,8 +44,15 @@ public class Test13
 
         s = "CM";
         Assert.AreEqual(900, _solution.RomanToInt(s));
-        
+
         s = "MCMXCIV";
         Assert.AreEqual(1994, _solution.RomanToInt(s));
+    }
+
+    [TestMethod]
+    public void TestSolution_WhenPassNoRomainNumberChar_ShouldThrowException()
+    {
+        string s = "AS";
+        Assert.ThrowsException<ArgumentOutOfRangeException>(() => _solution.RomanToInt(s));
     }
 }
