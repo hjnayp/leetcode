@@ -25,14 +25,14 @@ public class Solution
 
         IList<string> combinations = new List<string> { "" };
         IEnumerable<char[]> digitChars = digits.Select(digit => DigitToChars[digit]);
-        foreach (IList<string> addCombinations in digitChars.Select(ToCombination))
+        foreach (IList<string> addCombinations in digitChars.Select(ToCombinations))
         {
             combinations = addCombinations;
         }
 
         return combinations.ToList();
 
-        IList<string> ToCombination(char[] chars)
+        IList<string> ToCombinations(char[] chars)
         {
             return (from combination in combinations
                     from c in chars
