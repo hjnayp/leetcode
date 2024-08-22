@@ -1,5 +1,8 @@
 namespace source._3100._3133;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/minimum-array-end">Leetcode link</a>
+/// </summary>
 public class Solution
 {
     public long MinEnd(int n, int x)
