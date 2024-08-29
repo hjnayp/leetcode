@@ -1,7 +1,7 @@
 namespace source._0000._18;
 
 /// <summary>
-///     <a href="https://leetcode.cn/problems/4sum/">link</a>
+///     <a href="https://leetcode.cn/problems/4sum/">Link</a>
 /// </summary>
 public class Solution
 {
@@ -26,43 +26,46 @@ public class Solution
                 if (IsMinSumGreaterThanTarget(i, j)) break;
                 if (IsMaxSumSmallThanTarget(i, j)) continue;
                 if (j > i + 1 && IsElementAtIndexSameAsPrevious(j)) continue;
-
-                int left = j + 1;
-                int right = n - 1;
-
-                while (left < right)
-                {
-                    int compareResult = CompareSumOfElementsAtIndexToTarget(i, j, left, right);
-                    switch (compareResult)
-                    {
-                        case 0:
-                            quadruplets.Add([nums[i], nums[j], nums[left], nums[right]]);
-                            while (left < right && IsElementAtIndexSameAsPrevious(left + 1))
-                            {
-                                ++left;
-                            }
-
-                            while (left < right && IsElementAtIndexSameAsPrevious(right))
-                            {
-                                --right;
-                            }
-
-                            ++left;
-                            --right;
-
-                            break;
-                        case 1:
-                            --right;
-                            break;
-                        case -1:
-                            ++left;
-                            break;
-                    }
-                }
+                FindValidSums(i, j);
             }
         }
 
         return quadruplets;
+
+        void FindValidSums(int i, int j)
+        {
+            int left = j + 1;
+            int right = n - 1;
+            while (left < right)
+            {
+                int compareResult = CompareSumOfElementsAtIndexToTarget(i, j, left, right);
+                switch (compareResult)
+                {
+                    case 0:
+                        quadruplets.Add([nums[i], nums[j], nums[left], nums[right]]);
+                        while (left < right && IsElementAtIndexSameAsPrevious(left + 1))
+                        {
+                            ++left;
+                        }
+
+                        while (left < right && IsElementAtIndexSameAsPrevious(right))
+                        {
+                            --right;
+                        }
+
+                        ++left;
+                        --right;
+
+                        break;
+                    case 1:
+                        --right;
+                        break;
+                    case -1:
+                        ++left;
+                        break;
+                }
+            }
+        }
 
         bool IsMaxSumSmallThanTarget(int indexA, int indexB = -1)
         {

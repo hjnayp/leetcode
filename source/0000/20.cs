@@ -1,5 +1,8 @@
 namespace source._0000._20;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/valid-parentheses">Link</a>
+/// </summary>
 public class Solution
 {
     private static readonly IDictionary<char, char> ParenthesesPair = new Dictionary<char, char>

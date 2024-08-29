@@ -2,6 +2,9 @@ using source.Structs;
 
 namespace source._0000._19;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">Link</a>
+/// </summary>
 public class Solution
 {
     public ListNode? RemoveNthFromEnd(ListNode head, int n)
