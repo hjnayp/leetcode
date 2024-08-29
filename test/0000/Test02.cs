@@ -16,18 +16,18 @@ public class Test02
         ListNode? list2 = ListNode.FromArray(5, 6, 4);
         ListNode? expected = ListNode.FromArray(7, 0, 8);
         ListNode? actual = solution.AddTwoNumbers(list1, list2);
-        Assert.IsTrue(expected == actual);
+        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, actual));
 
         list1 = ListNode.FromArray(0);
         list2 = ListNode.FromArray(0);
         expected = ListNode.FromArray(0);
         actual = solution.AddTwoNumbers(list1, list2);
-        Assert.IsTrue(expected == actual);
+        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, actual));
 
         list1 = ListNode.FromArray(9, 9, 9, 9, 9, 9, 9);
         list2 = ListNode.FromArray(9, 9, 9, 9);
         expected = ListNode.FromArray(8, 9, 9, 9, 0, 0, 0, 1);
         actual = solution.AddTwoNumbers(list1, list2);
-        Assert.IsTrue(expected == actual);
+        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, actual));
     }
 }

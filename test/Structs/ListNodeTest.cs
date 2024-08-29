@@ -20,11 +20,16 @@ public class ListNodeTest
     {
         ListNode? list1 = ListNode.FromArray(1, 2, 3);
         ListNode? list2 = ListNode.FromArray(1, 2, 3);
-        Assert.IsTrue(list1 == list2);
+        Assert.IsTrue(ListNode.CompareListNodeEquivalent(list1, list2));
 
         list1 = ListNode.FromArray(1, 2, 3);
         list2 = ListNode.FromArray(1, 2, 4);
-        Assert.IsTrue(list1 != list2);
+        Assert.IsFalse(ListNode.CompareListNodeEquivalent(list1, list2));
+
+        list1 = null;
+        Assert.IsFalse(ListNode.CompareListNodeEquivalent(list1, list2));
+        list2 = null;
+        Assert.IsTrue(ListNode.CompareListNodeEquivalent(list1, list2));
     }
 
     [TestMethod]

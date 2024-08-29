@@ -2,13 +2,25 @@ namespace source.Structs;
 
 public class ListNode
 {
+    public ListNode? next;
+    public int val;
+
+    public ListNode(int val = 0, ListNode? next = null)
+    {
+        this.val = val;
+        this.next = next;
+    }
+
     public static ListNode? FromArray(params int[] nums)
     {
-        if (nums.Length == 0) return null;
+        if (nums.Length == 0)
+        {
+            return null;
+        }
 
         var listNode = new ListNode(nums[0]);
         ListNode head = listNode;
-        for (var i = 1; i < nums.Length; i++)
+        for (int i = 1; i < nums.Length; i++)
         {
             var node = new ListNode(nums[i]);
             listNode.next = node;
@@ -19,25 +31,18 @@ public class ListNode
         return head;
     }
 
-    public static bool operator ==(ListNode? a, ListNode? b)
+    public static bool CompareListNodeEquivalent(ListNode? a, ListNode? b)
     {
-        if (ReferenceEquals(a, b)) return true;
-        if (a is null || b is null) return false;
-        if (a.val != b.val) return false;
-        return a.next == b.next;
-    }
+        if (ReferenceEquals(a, b))
+        {
+            return true;
+        }
 
-    public static bool operator !=(ListNode? a, ListNode? b)
-    {
-        return !(a == b);
-    }
+        if (a is null || b is null)
+        {
+            return false;
+        }
 
-    public ListNode? next;
-    public int val;
-
-    public ListNode(int val = 0, ListNode? next = null)
-    {
-        this.val = val;
-        this.next = next;
+        return a.val == b.val && CompareListNodeEquivalent(a.next, b.next);
     }
 }
