@@ -3,7 +3,7 @@ using System.Text;
 namespace source._0000._14;
 
 /// <summary>
-///     https://leetcode.cn/problems/longest-common-prefix
+///     <a href="https://leetcode.cn/problems/longest-common-prefix">Longest Common Prefix</a>
 /// </summary>
 public class Solution
 {

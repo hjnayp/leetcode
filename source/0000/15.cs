@@ -1,7 +1,7 @@
 namespace source._0000._15;
 
 /// <summary>
-///     https://leetcode.cn/problems/3sum
+///     <a href="https://leetcode.cn/problems/3sum">3Sum</a>
 /// </summary>
 public class Solution
 {
@@ -23,7 +23,7 @@ public class Solution
                 if (sum == 0)
                 {
                     results.Add(new List<int> { nums[i], nums[j], nums[k] });
-                    
+
                     while (j < k && nums[j] == nums[j + 1])
                     {
                         ++j;

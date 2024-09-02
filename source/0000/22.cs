@@ -1,7 +1,7 @@
 namespace source._0000._22;
 
 /// <summary>
-///     <a href="https://leetcode.cn/problems/generate-parentheses">Link</a>
+///     <a href="https://leetcode.cn/problems/generate-parentheses">Generate Parentheses</a>
 /// </summary>
 public class Solution
 {

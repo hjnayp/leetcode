@@ -1,7 +1,7 @@
 namespace source._0000._18;
 
 /// <summary>
-///     <a href="https://leetcode.cn/problems/4sum/">Link</a>
+///     <a href="https://leetcode.cn/problems/4sum/">4Sum</a>
 /// </summary>
 public class Solution
 {

@@ -1,7 +1,9 @@
 namespace source._0000._04;
 
 /// <summary>
-///     https://leetcode.cn/problems/median-of-two-sorted-arrays
+///     <a href="https://leetcode.cn/problems/median-of-two-sorted-arrays">
+///         Medium of Two Sorted Arrays
+///     </a>
 /// </summary>
 public class Solution
 {

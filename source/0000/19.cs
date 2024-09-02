@@ -3,7 +3,9 @@ using source.Structs;
 namespace source._0000._19;
 
 /// <summary>
-///     <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">Link</a>
+///     <a href="https://leetcode.cn/problems/remove-nth-node-from-end-of-list">
+///         Remove Nth Node From End of List
+///     </a>
 /// </summary>
 public class Solution
 {

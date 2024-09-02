@@ -1,7 +1,7 @@
 namespace source._0000._16;
 
 /// <summary>
-///     https://leetcode.cn/problems/3sum-closest
+///     <a href="https://leetcode.cn/problems/3sum-closest">3Sum Closest</a>
 /// </summary>
 public class Solution
 {

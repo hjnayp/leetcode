@@ -1,7 +1,7 @@
 ﻿namespace source._0000._13;
 
 /// <summary>
-///     https://leetcode.cn/problems/roman-to-integer
+///     <a href="https://leetcode.cn/problems/roman-to-integer">Roman to Integer</a>
 /// </summary>
 public class Solution
 {
@@ -27,7 +27,7 @@ public class Solution
                 'D' => 500,
                 'M' when previousChar == 'C' => 800,
                 'M' => 1000,
-                _ => throw new ArgumentOutOfRangeException("Invalid letter")
+                _ => throw new ArgumentException("Wrong roman number")
             };
 
             previousChar = ch;

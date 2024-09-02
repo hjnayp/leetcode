@@ -1,7 +1,7 @@
 namespace source._0000._09;
 
 /// <summary>
-///     https://leetcode.cn/problems/palindrome-number
+///     <a href="https://leetcode.cn/problems/palindrome-number">Palindrome Number</a>
 /// </summary>
 public class Solution
 {

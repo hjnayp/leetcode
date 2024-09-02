@@ -3,7 +3,7 @@ using System.Text;
 namespace source._0000._06;
 
 /// <summary>
-///     https://leetcode.cn/problems/zigzag-conversion
+///     <a href="https://leetcode.cn/problems/zigzag-conversion">ZigZag Conversion</a>
 /// </summary>
 public class Solution
 {

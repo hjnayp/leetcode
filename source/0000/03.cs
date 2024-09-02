@@ -1,7 +1,9 @@
 namespace source._0000._03;
 
 /// <summary>
-///     https://leetcode.cn/problems/longest-substring-without-repeating-characters
+///     <a href="https://leetcode.cn/problems/longest-substring-without-repeating-characters">
+///         Longest Substring Without Repeating Characters
+///     </a>
 /// </summary>
 public class Solution
 {

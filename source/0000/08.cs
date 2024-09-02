@@ -1,7 +1,7 @@
 namespace source._0000._08;
 
 /// <summary>
-///     https://leetcode.cn/problems/string-to-integer-atoi/
+///     <a href="https://leetcode.cn/problems/string-to-integer-atoi">String to Integer (atoi)</a>
 /// </summary>
 public class Solution
 {

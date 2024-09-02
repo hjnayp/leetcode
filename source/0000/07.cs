@@ -1,7 +1,7 @@
 namespace source._0000._07;
 
 /// <summary>
-///     https://leetcode.cn/problems/reverse-integer
+///     <a href="https://leetcode.cn/problems/reverse-integer">Reverse Integer</a>
 /// </summary>
 public class Solution
 {
