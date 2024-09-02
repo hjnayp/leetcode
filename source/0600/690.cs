@@ -1,13 +1,13 @@
 namespace source._0600._690;
 
-internal class Employee
+public class Employee
 {
     public int id;
     public int importance;
     public IList<int> subordinates;
 }
 
-internal class Solution
+public class Solution
 {
     public int GetImportance(IList<Employee> employees, int id)
     {
