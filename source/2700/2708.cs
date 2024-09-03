@@ -1,5 +1,10 @@
 namespace source._2700._2708;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/maximum-strength-of-a-group">
+///         Maximum Strength of a Group
+///     </a>
+/// </summary>
 public class Solution
 {
     public long MaxStrength(int[] nums)
