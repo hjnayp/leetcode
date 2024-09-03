@@ -53,6 +53,6 @@ public class Test13
     public void TestSolution_WhenPassNoRomainNumberChar_ShouldThrowException()
     {
         string s = "AS";
-        Assert.ThrowsException<ArgumentOutOfRangeException>(() => _solution.RomanToInt(s));
+        Assert.ThrowsException<ArgumentException>(() => _solution.RomanToInt(s));
     }
 }
