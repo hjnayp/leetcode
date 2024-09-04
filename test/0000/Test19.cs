@@ -49,6 +49,6 @@ public class Test19
         ListNode? head = ListNode.FromArray(arr);
         ListNode? result = solution.RemoveNthFromEnd(head, n);
         ListNode? expected = ListNode.FromArray(expectedArr);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, result));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, result));
     }
 }

@@ -31,7 +31,7 @@ public class ListNode
         return head;
     }
 
-    public static bool CompareListNodeEquivalent(ListNode? a, ListNode? b)
+    public static bool AreEquivalent(ListNode? a, ListNode? b)
     {
         if (ReferenceEquals(a, b))
         {
@@ -43,6 +43,6 @@ public class ListNode
             return false;
         }
 
-        return a.val == b.val && CompareListNodeEquivalent(a.next, b.next);
+        return a.val == b.val && AreEquivalent(a.next, b.next);
     }
 }

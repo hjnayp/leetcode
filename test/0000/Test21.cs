@@ -16,13 +16,13 @@ public class Test21
         ListNode? list2 = ListNode.FromArray(1, 3, 4);
         ListNode? result = solution.MergeTwoLists(list1, list2);
         ListNode? expected = ListNode.FromArray(1, 1, 2, 3, 4, 4);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, result));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, result));
 
         list1 = ListNode.FromArray(1, 2, 4, 5, 6);
         list2 = ListNode.FromArray(1, 3, 4, 5);
         result = solution.MergeTwoLists(list1, list2);
         expected = ListNode.FromArray(1, 1, 2, 3, 4, 4, 5, 5, 6);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, result));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, result));
     }
 
     [TestMethod]
@@ -31,10 +31,10 @@ public class Test21
         var solution = new Solution();
         ListNode? list = ListNode.FromArray(1, 3, 4);
         ListNode? result = solution.MergeTwoLists(null, list);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(list, result));
+        Assert.IsTrue(ListNode.AreEquivalent(list, result));
 
         result = solution.MergeTwoLists(list, null);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(list, result));
+        Assert.IsTrue(ListNode.AreEquivalent(list, result));
     }
 
     [TestMethod]
@@ -42,6 +42,6 @@ public class Test21
     {
         var solution = new Solution();
         ListNode? result = solution.MergeTwoLists(null, null);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(null, result));
+        Assert.IsTrue(ListNode.AreEquivalent(null, result));
     }
 }

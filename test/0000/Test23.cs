@@ -20,15 +20,15 @@ public class Test23
         ];
 
         ListNode? expected = ListNode.FromArray(1, 1, 2, 3, 4, 4, 5, 6);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, solution.MergeKLists(lists)));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, solution.MergeKLists(lists)));
 
         lists = [ListNode.FromArray(1, 4, 5), null, null, ListNode.FromArray(1, 3, 4), ListNode.FromArray(2, 6), null];
         expected = ListNode.FromArray(1, 1, 2, 3, 4, 4, 5, 6);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, solution.MergeKLists(lists)));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, solution.MergeKLists(lists)));
 
         lists = [ListNode.FromArray(1, 4, 5), ListNode.FromArray(1, 2, 3, 4, 5)];
         expected = ListNode.FromArray(1, 1, 2, 3, 4, 4, 5, 5);
-        Assert.IsTrue(ListNode.CompareListNodeEquivalent(expected, solution.MergeKLists(lists)));
+        Assert.IsTrue(ListNode.AreEquivalent(expected, solution.MergeKLists(lists)));
     }
 
     [TestMethod]
