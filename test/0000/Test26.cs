@@ -12,7 +12,7 @@ public class Test26
     {
         var solution = new Solution();
         int[] nums = [1, 2, 2];
-        var k = solution.RemoveDuplicates(nums);
+        int k = solution.RemoveDuplicates(nums);
         Assert.AreEqual(2, k);
         int[] expected = [1, 2];
         CollectionAssert.AreEqual(expected, nums.Take(2).ToArray());
@@ -22,5 +22,16 @@ public class Test26
         Assert.AreEqual(5, k);
         expected = [0, 1, 2, 3, 4];
         CollectionAssert.AreEqual(expected, nums.Take(5).ToArray());
+    }
+
+    [TestMethod]
+    public void TestSolution_WhenOnlyOneNumber_ShouldReturnSelf()
+    {
+        var solution = new Solution();
+        int[] nums = [1];
+        int k = solution.RemoveDuplicates(nums);
+        Assert.AreEqual(nums.Length, k);
+        int[] expected = [1];
+        CollectionAssert.AreEqual(expected, nums.Take(nums.Length).ToArray());
     }
 }
