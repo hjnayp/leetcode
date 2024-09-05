@@ -17,10 +17,9 @@ public class Solution
         int idx = 0;
         int vIdx = 0;
         int n = nums.Length;
-        while (vIdx < n)
+        while (vIdx < n - 1)
         {
             vIdx++;
-            if (vIdx >= n) break;
             if (nums[vIdx] == nums[idx]) continue;
             nums[idx + 1] = nums[vIdx];
             ++idx;
