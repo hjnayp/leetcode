@@ -1,7 +1,7 @@
 namespace source._0000._27;
 
 /// <summary>
-///     https://leetcode.cn/problems/remove-element/description/
+///     <a href="https://leetcode.cn/problems/remove-element">Remove Element</a>
 /// </summary>
 public class Solution
 {
@@ -11,7 +11,12 @@ public class Solution
         for (int i = 0; i < p; ++i)
         {
             if (nums[i] != val) continue;
-            while (p > i && nums[p - 1] == val) --p;
+            
+            while (p > i && nums[p - 1] == val)
+            {
+                --p;
+            }
+
             if (p == i) break;
             nums[i] = nums[p-- - 1];
         }
