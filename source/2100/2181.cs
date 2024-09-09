@@ -11,13 +11,13 @@ public class Solution
 {
     public ListNode? MergeNodes(ListNode head)
     {
-        SplitNodes(head).Select(ToOneNode).Aggregate(head, (acc, val) => acc.next = val);
+        SplitNode(head).Select(ToOneNode).Aggregate(head, (acc, val) => acc.next = val);
         ListNode? res = head.next;
         head.next = null;
         return res;
     }
 
-    private static IList<ListNode> SplitNodes(ListNode? head)
+    private static IList<ListNode> SplitNode(ListNode? head)
     {
         if (head is null) return [];
 
