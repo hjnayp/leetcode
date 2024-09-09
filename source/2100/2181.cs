@@ -2,6 +2,11 @@ using source.Structs;
 
 namespace source._2100;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/merge-nodes-in-between-zeros">
+///         Merge Nodes in Between Zeros
+///     </a>
+/// </summary>
 public class Solution
 {
     public ListNode? MergeNodes(ListNode head)
