@@ -16,8 +16,12 @@ public class Test29
         RunTest(7, -3);
         RunTest(-7, -3);
         RunTest(2147483647, 1);
+        RunTest(0, 1);
         RunTest(int.MaxValue, 1);
         RunTest(int.MinValue, -1, int.MaxValue);
+        RunTest(int.MinValue, 1);
+        RunTest(1, int.MinValue, 0);
+        RunTest(int.MinValue, int.MinValue);
     }
 
     private static void RunTest(int dividend, int divisor, int? expected = null)

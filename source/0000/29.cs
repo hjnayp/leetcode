@@ -9,22 +9,14 @@ public class Solution
 {
     public int Divide(int dividend, int divisor)
     {
-        switch (dividend)
+        if (dividend == 0) return 0;
+
+        if (dividend == int.MinValue)
         {
-            case int.MinValue:
-                switch (divisor)
-                {
-                    case 1:
-                        return int.MinValue;
-                    case -1:
-                        return int.MaxValue;
-                }
-
-                break;
-            case 0:
-                return 0;
+            if (divisor == 1) return int.MinValue;
+            if (divisor == -1) return int.MaxValue;
         }
-
+        
         if (divisor == int.MinValue)
         {
             return dividend == int.MinValue ? 1 : 0;
