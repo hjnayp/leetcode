@@ -15,12 +15,12 @@ public class Test30
         string[] words = ["foo", "bar"];
         int[] expected = [0, 9];
         CollectionAssert.AreEqual(expected, solution.FindSubstring(s, words).ToArray());
-        
+
         s = "wordgoodgoodgoodbestword";
         words = ["word", "good", "best", "word"];
         expected = [];
         CollectionAssert.AreEqual(expected, solution.FindSubstring(s, words).ToArray());
-        
+
         s = "barfoofoobarthefoobarman";
         words = ["bar", "foo", "the"];
         expected = [6, 9, 12];
@@ -36,4 +36,6 @@ public class Test30
         int[] expected = [];
         CollectionAssert.AreEqual(expected, solution.FindSubstring(s, words).ToArray());
     }
+    
+    
 }
