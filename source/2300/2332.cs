@@ -1,8 +1,7 @@
 namespace source._2300._2332;
 
 /// <summary>
-///     <a
-///         href="https://leetcode.cn/problems/the-latest-time-to-catch-a-bus">
+///     <a href="https://leetcode.cn/problems/the-latest-time-to-catch-a-bus">
 ///         The Latest Time to Catch a Bus
 ///     </a>
 /// </summary>
