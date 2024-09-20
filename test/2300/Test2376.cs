@@ -13,6 +13,7 @@ public class Test2376
         RunTest(5, 5);
         RunTest(19, 20);
         RunTest(110, 135);
+        RunTest(985991, 25637815);
     }
 
     static void RunTest(int expected, int input)
