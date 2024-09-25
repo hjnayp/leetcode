@@ -2,6 +2,11 @@ using source.Structs;
 
 namespace source._0000._24;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/swap-nodes-in-pairs">
+///         Swap Nodes in Pairs
+///     </a>
+/// </summary>
 public class Solution
 {
     public ListNode? SwapPairs(ListNode? head)
