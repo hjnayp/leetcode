@@ -9,16 +9,16 @@ public class Solution
 {
     public int SearchInsert(int[] nums, int target)
     {
-        if (target > nums[^1]) return nums.Length;
         int left = 0;
         int right = nums.Length - 1;
-        while (left < right)
+        int index = nums.Length;
+        while (left <= right)
         {
             int mid = (right + left) / 2;
-            if (nums[mid] == target) return mid;
-            if (nums[mid] > target)
+            if (nums[mid] >= target)
             {
-                right = mid;
+                right = mid - 1;
+                index = mid;
             }
             else
             {
@@ -26,6 +26,6 @@ public class Solution
             }
         }
 
-        return right;
+        return index;
     }
 }
