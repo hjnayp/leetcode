@@ -5,12 +5,12 @@ namespace test._0000;
 [TestClass]
 public class Test33
 {
-    private Solution solution;
+    private Solution _solution;
 
     [TestInitialize]
     public void Setup()
     {
-        solution = new Solution();
+        _solution = new Solution();
     }
 
     [TestMethod]
@@ -21,7 +21,7 @@ public class Test33
         int target = 5;
 
         // execute
-        int result = solution.Search(emptyArray, target);
+        int result = _solution.Search(emptyArray, target);
 
         // verify
         Assert.AreEqual(-1, result);
@@ -34,9 +34,9 @@ public class Test33
         int[] singleElementArray = [3];
 
         // execute & verify
-        Assert.AreEqual(0, solution.Search(singleElementArray, 3));
-        Assert.AreEqual(-1, solution.Search(singleElementArray, 5));
-        Assert.AreEqual(-1, solution.Search(singleElementArray, 0));
+        Assert.AreEqual(0, _solution.Search(singleElementArray, 3));
+        Assert.AreEqual(-1, _solution.Search(singleElementArray, 5));
+        Assert.AreEqual(-1, _solution.Search(singleElementArray, 0));
     }
 
     [TestMethod]
@@ -48,8 +48,8 @@ public class Test33
         int targetAbsent = 3;
 
         // execute & verify
-        Assert.AreEqual(4, solution.Search(array, targetPresent));
-        Assert.AreEqual(-1, solution.Search(array, targetAbsent));
+        Assert.AreEqual(4, _solution.Search(array, targetPresent));
+        Assert.AreEqual(-1, _solution.Search(array, targetAbsent));
     }
 
     [TestMethod]
@@ -59,7 +59,7 @@ public class Test33
         int[] array = [1, 3];
 
         // execute & verify
-        Assert.AreEqual(1, solution.Search(array, 3));
+        Assert.AreEqual(1, _solution.Search(array, 3));
     }
 
     [TestMethod]
@@ -69,7 +69,7 @@ public class Test33
         int[] array = [3, 1];
 
         // execute & verify
-        Assert.AreEqual(1, solution.Search(array, 1));
+        Assert.AreEqual(1, _solution.Search(array, 1));
     }
 
     [TestMethod]
@@ -81,7 +81,7 @@ public class Test33
         int targetAbsent = 10;
 
         // execute & verify
-        Assert.AreEqual(4, solution.Search(array, targetPresent));
-        Assert.AreEqual(-1, solution.Search(array, targetAbsent));
+        Assert.AreEqual(4, _solution.Search(array, targetPresent));
+        Assert.AreEqual(-1, _solution.Search(array, targetAbsent));
     }
 }
