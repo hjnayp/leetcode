@@ -7,10 +7,11 @@ namespace source._1800._1845;
 /// </summary>
 public class SeatManager
 {
-    private PriorityQueue<int, int> _seats = new();
+    private readonly PriorityQueue<int, int> _seats;
 
     public SeatManager(int n)
     {
+        _seats = new PriorityQueue<int, int>(n);
         for (int i = 1; i <= n; ++i)
         {
             _seats.Enqueue(i, i);
