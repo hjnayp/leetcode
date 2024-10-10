@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using source._0000._39;
 
 namespace test._0000;
@@ -39,6 +40,7 @@ public class Test39
         AssertEqual(expected, result);
     }
 
+    [ExcludeFromCodeCoverage]
     private void AssertEqual(List<List<int>> a, IList<IList<int>> b)
     {
         if (a.Count != b.Count) throw new Exception("Count mismatch");
