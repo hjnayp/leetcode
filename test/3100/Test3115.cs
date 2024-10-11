@@ -11,19 +11,18 @@ public class Test3115
     private Solution _solution = new();
     private int[] _nums;
 
-    [TestMethod]
+    [TestMethod, Timeout(1000)]
     public void normal_case_00()
     {
-        RunCase("[4,2,9,5,3]", 3);
+        RunCase("[4,2,9,5,3,19]", 4);
     }
 
-    [TestMethod]
+    [TestMethod, Timeout(1000)]
     public void only_one_prime_case()
     {
-        RunCase("[4,8,2,8]", 0);
+        RunCase("[4,8,2,8,0,1,100]", 0);
     }
 
-    [Timeout(1000)]
     private void RunCase(string input, int expected)
     {
         _nums = ArrayParser.ParseOneDimensionalArray<int>(input);
