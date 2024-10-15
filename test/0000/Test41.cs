@@ -22,5 +22,9 @@ public class Test41
         nums = [7, 8, 9, 11, 12];
         expected = 1;
         Assert.AreEqual(expected, solution.FirstMissingPositive(nums));
+
+        nums = [1, 2, 3];
+        expected = 4;
+        Assert.AreEqual(expected, solution.FirstMissingPositive(nums));
     }
 }
