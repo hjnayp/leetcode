@@ -8,10 +8,10 @@ public class Solution
 {
     public string GetSmallestString(string s)
     {
-        for (var i = 0; i < s.Length - 1; i++)
+        for (int i = 0; i < s.Length - 1; i++)
         {
-            var prevChar = s[i];
-            var nextChar = s[i + 1];
+            char prevChar = s[i];
+            char nextChar = s[i + 1];
 
             if (prevChar % 2 != nextChar % 2) continue;
             if (prevChar > nextChar)
