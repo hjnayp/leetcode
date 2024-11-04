@@ -8,6 +8,7 @@ namespace test._0100;
 public class Test198
 {
     [TestMethod]
+    [Timeout(1000)]
     public void TestSolution()
     {
         var solution = new Solution();
