@@ -11,7 +11,6 @@ public class Solution
 
     public IList<int> InorderTraversal(TreeNode root)
     {
-        _path.Clear();
         Traversal(root);
         return _path;
     }
