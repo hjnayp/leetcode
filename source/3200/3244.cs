@@ -1,5 +1,3 @@
-using source.Structs;
-
 namespace source._3200._3244;
 
 /// <summary>
@@ -11,27 +9,32 @@ public class Solution
 {
     public int[] ShortestDistanceAfterQueries(int n, int[][] queries)
     {
-        List<int> res = [];
-        int distance = n - 1;
-        SegmentTree tree = new(n);
-
-        foreach (int[] query in queries)
+        int[] roads = new int[n];
+        for (int i = 0; i < n; i++)
         {
-            int u = query[0];
-            int v = query[1];
-
-            int skipDistance = tree.SumRange(u + 1, v - 1);
-            int reducedDistance = v - u - 1;
-
-            if (reducedDistance > skipDistance)
-            {
-                tree.UpdateRange(u + 1, v - 1, 1);
-                distance -= reducedDistance - skipDistance;
-            }
-
-            res.Add(distance);
+            roads[i] = i + 1;
         }
 
-        return res.ToArray();
+        int[] res = new int[queries.Length];
+        int distance = n - 1;
+        for (int i = 0; i < queries.Length; i++)
+        {
+            int u = queries[i][0];
+            int v = queries[i][1];
+            int k = roads[u];
+            roads[u] = v;
+
+            while (k != -1 && k < v)
+            {
+                int t = roads[k];
+                roads[k] = -1;
+                k = t;
+                --distance;
+            }
+
+            res[i] = distance;
+        }
+
+        return res;
     }
 }
