@@ -1,10 +1,11 @@
 namespace source.Structs;
 
-public class TreeNode
+public class TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
 {
     public static TreeNode? CreateTreeWithList(IList<int?> list)
     {
         if (list.Count == 0 || list[0] is null) return null;
+        
         var nodes = new List<TreeNode?>(list.Count);
         nodes.AddRange(list.Select(val => val.HasValue ? new TreeNode(val.Value) : null));
 
@@ -24,16 +25,9 @@ public class TreeNode
         return nodes[0];
     }
 
-    public int val;
-    public TreeNode? left;
-    public TreeNode? right;
-
-    public TreeNode(int val = 0, TreeNode? left = null, TreeNode? right = null)
-    {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
+    public int val = val;
+    public TreeNode? left = left;
+    public TreeNode? right = right;
 
     public override bool Equals(object? obj)
     {

@@ -12,19 +12,19 @@ public class Test94
     public void NormalCase()
     {
         var solution = new Solution();
-        var root = TreeNode.CreateTreeWithList(new List<int?> { 1, null, 2, 3 });
-        List<int> actual = solution.InorderTraversal(root).ToList();
-        var expected = new List<int> { 1, 3, 2 };
-        CollectionAssert.AreEquivalent(expected, actual);
+        var root = TreeNode.CreateTreeWithList([1, null, 2, 3]);
+        int[] actual = solution.InorderTraversal(root).ToArray();
+        int[] expected = [1, 3, 2];
+        CollectionAssert.AreEqual(expected, actual);
 
-        root = TreeNode.CreateTreeWithList(new int?[] { });
-        actual = solution.InorderTraversal(root).ToList();
-        expected = new List<int>();
-        CollectionAssert.AreEquivalent(expected, actual);
+        root = TreeNode.CreateTreeWithList([]);
+        actual = solution.InorderTraversal(root).ToArray();
+        expected = [];
+        CollectionAssert.AreEqual(expected, actual);
 
-        root = TreeNode.CreateTreeWithList(new int?[] { 1 });
-        actual = solution.InorderTraversal(root).ToList();
-        expected = new List<int> { 1 };
-        CollectionAssert.AreEquivalent(expected, actual);
+        root = TreeNode.CreateTreeWithList([1]);
+        actual = solution.InorderTraversal(root).ToArray();
+        expected = [1];
+        CollectionAssert.AreEqual(expected, actual);
     }
 }
