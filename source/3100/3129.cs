@@ -1,7 +1,9 @@
 namespace source._3100._3129;
 
 /// <summary>
-///     https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i
+///     <a href="https://leetcode.cn/problems/find-all-possible-stable-binary-arrays-i">
+///         Find All Possible Stable Binary Arrays I
+///     </a>
 /// </summary>
 public class Solution
 {
