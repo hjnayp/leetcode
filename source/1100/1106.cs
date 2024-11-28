@@ -1,5 +1,10 @@
 namespace source._1100._1106;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/parsing-a-boolean-expression">
+///         Parsing A Boolean Expression
+///     </a>
+/// </summary>
 public class Solution
 {
     public bool ParseBoolExpr(string expression)
