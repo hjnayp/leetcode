@@ -21,7 +21,6 @@ public class Solution
             nums[i + 2] ^= 1;
         }
 
-
         return operationCount;
     }
 }
