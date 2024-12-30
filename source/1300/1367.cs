@@ -1,6 +1,6 @@
 using source.Structs;
 
-namespace source._1300;
+namespace source._1300._1367;
 
 /// <summary>
 ///     <a href="https://leetcode.cn/problems/linked-list-in-binary-tree/description">
