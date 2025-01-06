@@ -1,4 +1,4 @@
-namespace source._2200;
+namespace source._2200._2225;
 
 public class Solution
 {
