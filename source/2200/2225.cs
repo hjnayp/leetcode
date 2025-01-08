@@ -1,8 +1,8 @@
-namespace source._2200;
+namespace source._2200._2225;
 
 public class Solution
 {
-    public IList<IList<int>> FindWinners(int[][] matches)
+    public int[][] FindWinners(int[][] matches)
     {
         var winCnt = new Dictionary<int, int>();
         var loseCnt = new Dictionary<int, int>();
@@ -23,7 +23,7 @@ public class Solution
             if (value == 1) res[1].Add(key);
         }
 
-        foreach ((int key, int value) in winCnt)
+        foreach ((int key, _) in winCnt)
         {
             if (!loseCnt.ContainsKey(key)) res[0].Add(key);
         }
@@ -33,6 +33,6 @@ public class Solution
             arr.Sort();
         }
 
-        return new int[][] { res[0].ToArray(), res[1].ToArray() };
+        return [res[0].ToArray(), res[1].ToArray()];
     }
 }
