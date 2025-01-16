@@ -1,4 +1,6 @@
-﻿/// <summary>
+﻿namespace source._1300._1387;
+
+/// <summary>
 ///     <a href="https://leetcode.cn/problems/sort-integers-by-the-power-value">
 ///         1387. Sort Integers by The Power Value
 ///     </a>
