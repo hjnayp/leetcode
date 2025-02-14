@@ -16,7 +16,7 @@ public class Solution
 
         while (low <= high)
         {
-            int mid = (high - low) / 2 + low / 2;
+            int mid = (high - low) / 2 + low;
             if (HasEnoughPosition(mid))
             {
                 low = mid + 1;
