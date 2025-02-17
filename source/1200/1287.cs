@@ -1,5 +1,10 @@
 namespace source._1200._1287;
 
+/// <summary>
+///     <a href="https://leetcode.cn/problems/element-appearing-more-than-25-in-sorted-array">
+///         1287. Element Appearing More Than 25% In Sorted Array
+///     </a>
+/// </summary>
 public class Solution
 {
     public int FindSpecialInteger(int[] arr)
