@@ -11,7 +11,7 @@ public class Test2810
     public void NormalCase()
     {
         var solution = new Solution();
-        var s = "string";
+        string? s = "string";
         Assert.AreEqual("rtsng", solution.FinalString(s));
 
         s = "poiinter";

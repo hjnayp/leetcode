@@ -26,7 +26,7 @@ public class Solution
             var subsets = new List<IList<int>>();
             while (i < nums.Length)
             {
-                var count = 0;
+                int count = 0;
                 while (i < nums.Length && (count == 0 || nums[i] == nums[i - 1]))
                 {
                     ++count;
@@ -57,7 +57,7 @@ public class Solution
                 return;
             }
 
-            var numSubsets = arr[index];
+            IList<IList<int>>? numSubsets = arr[index];
             foreach (IList<int> numSubset in numSubsets)
             {
                 subset.AddRange(numSubset);

@@ -4,12 +4,12 @@ public class Solution
 {
     public int MaximumSwap(int num)
     {
-        var digits = num.ToString().ToCharArray();
-        var n = digits.Length;
-        var maxId = n - 1;
-        var id1 = -1;
-        var id2 = -1;
-        for (var i = n - 1; i >= 0; --i)
+        char[]? digits = num.ToString().ToCharArray();
+        int n = digits.Length;
+        int maxId = n - 1;
+        int id1 = -1;
+        int id2 = -1;
+        for (int i = n - 1; i >= 0; --i)
         {
             if (digits[i] > digits[maxId])
             {

@@ -3,10 +3,10 @@ using source._0500._551;
 
 namespace test._0500;
 
-[TestClass, TestSubject(typeof(Solution))]
+[TestClass]
+[TestSubject(typeof(Solution))]
 public class Test551
 {
-
     [TestMethod]
     public void NormalCase()
     {

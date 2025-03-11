@@ -30,7 +30,9 @@ public class Solution
             {
                 int length = Length(grid[i][j]);
                 if (length > maxLength)
+                {
                     maxLength = length;
+                }
             }
 
             res[j] = maxLength;

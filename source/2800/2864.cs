@@ -8,11 +8,15 @@ public class Solution
     {
         int cnt = s.Sum(c => c - '0');
         var sb = new StringBuilder();
-        for (var i = 0; i < cnt - 1; ++i)
+        for (int i = 0; i < cnt - 1; ++i)
+        {
             sb.Append('1');
+        }
 
         for (int i = cnt - 1; i < s.Length - 1; ++i)
+        {
             sb.Append('0');
+        }
 
         sb.Append('1');
         return sb.ToString();

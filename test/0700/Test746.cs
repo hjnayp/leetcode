@@ -11,8 +11,8 @@ public class Test746
     public void NormalCase()
     {
         var solution = new Solution();
-        var input = new[] { 10, 15, 20 };
-        var expected = 15;
+        int[]? input = new[] { 10, 15, 20 };
+        int expected = 15;
         Assert.AreEqual(expected, solution.MinCostClimbingStairs(input));
 
         input = new[] { 1, 100, 1, 1, 1, 100, 1, 1, 100, 1 };

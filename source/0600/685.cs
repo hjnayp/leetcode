@@ -7,32 +7,6 @@ namespace source._0600._685;
 /// </summary>
 public class Solution
 {
-    private class UnionFind
-    {
-        private int[] _parent;
-
-        public UnionFind(uint size)
-        {
-            _parent = new int[size];
-            for (int i = 0; i < _parent.Length; i++)
-            {
-                _parent[i] = i;
-            }
-        }
-
-        public int Find(int index)
-        {
-            return index == _parent[index]
-                ? _parent[index]
-                : _parent[index] = Find(_parent[index]);
-        }
-
-        public void Merge(int u, int v)
-        {
-            _parent[Find(u)] = Find(v);
-        }
-    }
-
     public int[] FindRedundantDirectedConnection(int[][] edges)
     {
         int[]? conflict = null;
@@ -82,5 +56,31 @@ public class Solution
         [
             parent[conflict[1]], conflict[1],
         ];
+    }
+
+    private class UnionFind
+    {
+        private int[] _parent;
+
+        public UnionFind(uint size)
+        {
+            _parent = new int[size];
+            for (int i = 0; i < _parent.Length; i++)
+            {
+                _parent[i] = i;
+            }
+        }
+
+        public int Find(int index)
+        {
+            return index == _parent[index]
+                ? _parent[index]
+                : _parent[index] = Find(_parent[index]);
+        }
+
+        public void Merge(int u, int v)
+        {
+            _parent[Find(u)] = Find(v);
+        }
     }
 }

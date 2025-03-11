@@ -7,13 +7,12 @@ namespace test._2800;
 [TestSubject(typeof(Solution))]
 public class Test2864
 {
-
     [TestMethod]
     public void Method()
     {
         var solution = new Solution();
-        var input = "1";
-        var expected = "1";
+        string input = "1";
+        string expected = "1";
         string actual = solution.MaximumOddBinaryNumber(input);
         Assert.AreEqual(expected, actual);
 

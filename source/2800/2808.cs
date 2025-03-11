@@ -6,7 +6,7 @@ public class Solution
     {
         int n = nums.Count;
         var map = new Dictionary<int, List<int>>();
-        for (var i = 0; i < n; ++i)
+        for (int i = 0; i < n; ++i)
         {
             map.TryAdd(nums[i], new List<int>());
             map[nums[i]].Add(i);
@@ -16,8 +16,11 @@ public class Solution
         foreach ((_, List<int>? positions) in map)
         {
             int maxDistance = positions[0] + n - positions[^1];
-            for (var i = 1; i < positions.Count; ++i)
+            for (int i = 1; i < positions.Count; ++i)
+            {
                 maxDistance = Math.Max(maxDistance, positions[i] - positions[i - 1]);
+            }
+
             res = Math.Min(res, maxDistance / 2);
         }
 

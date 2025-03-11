@@ -16,14 +16,14 @@ public class Teset721
             ["John", "johnsmith@mail.com", "john_newyork@mail.com"],
             ["John", "johnsmith@mail.com", "john00@mail.com"],
             ["Mary", "mary@mail.com"],
-            ["John", "johnnybravo@mail.com"]
+            ["John", "johnnybravo@mail.com"],
         ];
 
         string[][] expected =
         [
             ["John", "john00@mail.com", "john_newyork@mail.com", "johnsmith@mail.com"],
             ["Mary", "mary@mail.com"],
-            ["John", "johnnybravo@mail.com"]
+            ["John", "johnnybravo@mail.com"],
         ];
 
         CheckResult(expected, solution.AccountsMerge(accounts).Select((a) => a.ToArray()).ToArray());
@@ -37,12 +37,12 @@ public class Teset721
         [
             ["Alex", "Alex5@m.co", "Alex4@m.co", "Alex0@m.co"], ["Ethan", "Ethan3@m.co", "Ethan3@m.co", "Ethan0@m.co"],
             ["Kevin", "Kevin4@m.co", "Kevin2@m.co", "Kevin2@m.co"], ["Gabe", "Gabe0@m.co", "Gabe3@m.co", "Gabe2@m.co"],
-            ["Gabe", "Gabe3@m.co", "Gabe4@m.co", "Gabe2@m.co"]
+            ["Gabe", "Gabe3@m.co", "Gabe4@m.co", "Gabe2@m.co"],
         ];
         string[][] expected =
         [
             ["Alex", "Alex0@m.co", "Alex4@m.co", "Alex5@m.co"], ["Ethan", "Ethan0@m.co", "Ethan3@m.co"],
-            ["Gabe", "Gabe0@m.co", "Gabe2@m.co", "Gabe3@m.co", "Gabe4@m.co"], ["Kevin", "Kevin2@m.co", "Kevin4@m.co"]
+            ["Gabe", "Gabe0@m.co", "Gabe2@m.co", "Gabe3@m.co", "Gabe4@m.co"], ["Kevin", "Kevin2@m.co", "Kevin4@m.co"],
         ];
 
         CheckResult(expected, solution.AccountsMerge(accounts).Select((a) => a.ToArray()).ToArray());
@@ -56,13 +56,13 @@ public class Teset721
         [
             ["Kevin", "Kevin1@m.co", "Kevin5@m.co", "Kevin2@m.co"], ["Bob", "Bob3@m.co", "Bob1@m.co", "Bob2@m.co"],
             ["Lily", "Lily3@m.co", "Lily2@m.co", "Lily0@m.co"], ["Gabe", "Gabe2@m.co", "Gabe0@m.co", "Gabe2@m.co"],
-            ["Kevin", "Kevin4@m.co", "Kevin3@m.co", "Kevin3@m.co"]
+            ["Kevin", "Kevin4@m.co", "Kevin3@m.co", "Kevin3@m.co"],
         ];
         string[][] expected =
         [
             ["Lily", "Lily0@m.co", "Lily2@m.co", "Lily3@m.co"], ["Gabe", "Gabe0@m.co", "Gabe2@m.co"],
             ["Kevin", "Kevin1@m.co", "Kevin2@m.co", "Kevin5@m.co"], ["Kevin", "Kevin3@m.co", "Kevin4@m.co"],
-            ["Bob", "Bob1@m.co", "Bob2@m.co", "Bob3@m.co"]
+            ["Bob", "Bob1@m.co", "Bob2@m.co", "Bob3@m.co"],
         ];
 
         CheckResult(expected, solution.AccountsMerge(accounts).Select((a) => a.ToArray()).ToArray());
@@ -78,16 +78,15 @@ public class Teset721
             ["David", "David3@m.co", "David4@m.co"],
             ["David", "David4@m.co", "David5@m.co"],
             ["David", "David2@m.co", "David3@m.co"],
-            ["David", "David1@m.co", "David2@m.co"]
+            ["David", "David1@m.co", "David2@m.co"],
         ];
         string[][] expected =
         [
-            ["David", "David0@m.co", "David1@m.co", "David2@m.co", "David3@m.co", "David4@m.co", "David5@m.co"]
+            ["David", "David0@m.co", "David1@m.co", "David2@m.co", "David3@m.co", "David4@m.co", "David5@m.co"],
         ];
 
         CheckResult(expected, solution.AccountsMerge(accounts).Select((a) => a.ToArray()).ToArray());
     }
-
 
     private void CheckResult(string[][] expected, string[][] actual)
     {

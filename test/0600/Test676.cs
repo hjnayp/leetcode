@@ -19,23 +19,21 @@ public class Test676
             [[], ["hello", "hallo", "leetcode"], ["hello"], ["hhllo"], ["hell"], ["leetcoded"]],
             [null, null, true, true, false, false]
         );
-        
+
         CreateTestSuit(
             [[], ["hello", "hallo", "leetcode"], ["hello"], ["hallo"], ["hell"], ["leetcodd"]],
             [null, null, true, true, false, true]
-        );      
+        );
     }
 
     [TestMethod]
     public void TestNotPassCase()
     {
-
         CreateTestSuit(
-            [[], ["hello","hallo","leetcode","judge"], ["hello"], ["hallo"], ["hell"], ["leetcodd"], ["judge"]],
-            [null,null,true,true,false,true,false]
+            [[], ["hello", "hallo", "leetcode", "judge"], ["hello"], ["hallo"], ["hell"], ["leetcodd"], ["judge"]],
+            [null, null, true, true, false, true, false]
         );
     }
-
 
     private void CreateTestSuit(string[][] parameters, bool?[] results)
     {

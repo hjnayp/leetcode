@@ -4,9 +4,9 @@ public class Solution
 {
     public int MaxSatisfied(int[] customers, int[] grumpy, int minutes)
     {
-        var left = 0;
-        var right = 0;
-        var maxSatisfied = 0;
+        int left = 0;
+        int right = 0;
+        int maxSatisfied = 0;
         while (right < minutes)
         {
             maxSatisfied += (0 ^ grumpy[right]) * customers[right];
@@ -25,7 +25,7 @@ public class Solution
         }
 
         maxSatisfied += customers.Select((t, i) => (1 ^ grumpy[i]) * t)
-                                 .Sum();
+            .Sum();
         return maxSatisfied;
     }
 }

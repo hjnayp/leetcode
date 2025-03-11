@@ -15,7 +15,7 @@ public class Test741
         {
             new[] { 0, 1, -1 },
             new[] { 1, 0, -1 },
-            new[] { 1, 1, 1 }
+            new[] { 1, 1, 1 },
         };
         Assert.AreEqual(5, solution.CherryPickup(grid));
     }
@@ -28,7 +28,7 @@ public class Test741
         {
             new[] { 1, 1, -1 },
             new[] { 1, -1, 1 },
-            new[] { -1, 1, 1 }
+            new[] { -1, 1, 1 },
         };
         Assert.AreEqual(0, solution.CherryPickup(grid));
     }

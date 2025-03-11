@@ -12,6 +12,6 @@ public class Test2860
     {
         Solution solution = new();
         Assert.AreEqual(2, solution.CountWays([1, 1]));
-        Assert.AreEqual(3, solution.CountWays([6,0,3,3,6,7,2,7]));
+        Assert.AreEqual(3, solution.CountWays([6, 0, 3, 3, 6, 7, 2, 7]));
     }
 }

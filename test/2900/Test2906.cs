@@ -18,7 +18,7 @@ public class Test2906
         grid = [[1, 2], [3, 4]];
         expected = [[24, 12], [8, 6]];
         result = solution.ConstructProductMatrix(grid);
-        for (var i = 0; i < grid.Length; i++)
+        for (int i = 0; i < grid.Length; i++)
         {
             CollectionAssert.AreEqual(expected[i], result[i]);
         }
@@ -26,7 +26,7 @@ public class Test2906
         grid = [[12345], [2], [1]];
         expected = [[2], [0], [0]];
         result = solution.ConstructProductMatrix(grid);
-        for (var i = 0; i < grid.Length; i++)
+        for (int i = 0; i < grid.Length; i++)
         {
             CollectionAssert.AreEqual(expected[i], result[i]);
         }

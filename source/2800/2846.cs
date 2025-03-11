@@ -8,8 +8,10 @@ public class Solution
     {
         int m = queries.Length;
         var neighbors = new IDictionary<int, int>[n];
-        for (var i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
+        {
             neighbors[i] = new Dictionary<int, int>();
+        }
 
         foreach (int[] edge in edges)
         {
@@ -18,29 +20,33 @@ public class Solution
         }
 
         var queryArr = new IList<int[]>[n];
-        for (var i = 0; i < n; i++)
+        for (int i = 0; i < n; i++)
+        {
             queryArr[i] = new List<int[]>();
+        }
 
-        for (var i = 0; i < m; i++)
+        for (int i = 0; i < m; i++)
         {
             queryArr[queries[i][0]].Add(new[] { queries[i][1], i });
             queryArr[queries[i][1]].Add(new[] { queries[i][0], i });
         }
 
-        var count = new int[n][];
-        for (var i = 0; i < n; i++)
+        int[][] count = new int[n][];
+        for (int i = 0; i < n; i++)
+        {
             count[i] = new int[_W + 1];
+        }
 
-        var visited = new bool[n];
-        var uf = new int[n];
-        var lca = new int[m];
+        bool[] visited = new bool[n];
+        int[] uf = new int[n];
+        int[] lca = new int[m];
         Tarjan(0, -1, neighbors, queryArr, count, visited, uf, lca);
 
-        var res = new int[m];
-        for (var i = 0; i < m; i++)
+        int[] res = new int[m];
+        for (int i = 0; i < m; i++)
         {
             int totalCount = 0, maxCount = 0;
-            for (var j = 1; j <= _W; j++)
+            for (int j = 1; j <= _W; j++)
             {
                 int t = count[queries[i][0]][j] + count[queries[i][1]][j] - 2 * count[lca[i]][j];
                 maxCount = Math.Max(maxCount, t);
@@ -81,7 +87,7 @@ public class Solution
         {
             int targetNode = pair[0];
             if (node != targetNode && !visited[targetNode]) continue;
-            
+
             int index = pair[1];
             lca[index] = Find(uf, targetNode);
         }
@@ -92,7 +98,9 @@ public class Solution
     private int Find(int[] uf, int i)
     {
         if (uf[i] == i)
+        {
             return i;
+        }
 
         uf[i] = Find(uf, uf[i]);
         return uf[i];

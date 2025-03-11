@@ -16,7 +16,6 @@ public class Test535
         RunCase("https://leetcode.cn/problems/encode-and-decode-tinyurl/");
     }
 
-
     [Timeout(1000)]
     private void RunCase(string url)
     {

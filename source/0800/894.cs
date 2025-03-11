@@ -18,7 +18,7 @@ public class Solution
             return res;
         }
 
-        for (var i = 1; i < n; i += 2)
+        for (int i = 1; i < n; i += 2)
         {
             IList<TreeNode>? left = AllPossibleFBT(i);
             IList<TreeNode>? right = AllPossibleFBT(n - i - 1);

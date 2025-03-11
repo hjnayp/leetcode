@@ -3,7 +3,8 @@ using source._0600._699;
 
 namespace test._0600;
 
-[TestClass, TestSubject(typeof(Solution))]
+[TestClass]
+[TestSubject(typeof(Solution))]
 public class Test699
 {
     [TestMethod]

@@ -18,7 +18,7 @@ public class Solution
                 int right = i - 1;
                 while (right >= left && (long)arr[left] * arr[right] > arr[i]) --right;
                 if (right < left || (long)arr[left] * arr[right] != arr[i]) continue;
-                dp[i] = (int)((dp[i] + ((long)dp[left] * dp[right] * (arr[left] == arr[right] ? 1 : 2))) % kMod);
+                dp[i] = (int)((dp[i] + (long)dp[left] * dp[right] * (arr[left] == arr[right] ? 1 : 2)) % kMod);
             }
         }
 

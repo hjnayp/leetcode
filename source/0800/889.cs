@@ -11,9 +11,10 @@ public class Solution
     {
         int n = preorder.Length;
         var posMap = new Dictionary<int, int>();
-        for (var i = 0; i < n; ++i)
+        for (int i = 0; i < n; ++i)
+        {
             posMap[postorder[i]] = i;
-
+        }
 
         return CreateTree(0, n - 1, 0, n - 1);
 
@@ -21,9 +22,11 @@ public class Solution
         {
             if (preLeft > preRight) return null;
 
-            var leftCnt = 0;
+            int leftCnt = 0;
             if (preLeft < preRight)
+            {
                 leftCnt = posMap[preorder[preLeft + 1]] - postLeft + 1;
+            }
 
             return new TreeNode(
                 preorder[preLeft],

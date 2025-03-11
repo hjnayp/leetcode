@@ -23,7 +23,6 @@ public class Solution
             ++sum;
         }
 
-
         return sum + (light == heavy ? 1 : 0);
     }
 }

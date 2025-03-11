@@ -6,7 +6,7 @@ public class Solution
 {
     public TreeNode? BstToGst(TreeNode? root)
     {
-        var sum = 0;
+        int sum = 0;
         RightRootLeft(root, ref sum);
         return root;
     }

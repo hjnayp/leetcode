@@ -7,7 +7,6 @@ namespace test._2700;
 [TestSubject(typeof(Solution))]
 public class Test2789
 {
-
     [TestMethod]
     public void Method()
     {

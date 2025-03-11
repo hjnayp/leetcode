@@ -12,15 +12,15 @@ public class Test2765
     [TestMethod]
     public void NormalCase()
     {
-        var nums = new[] { 2, 3, 4, 3, 4 };
-        var expected = 4;
+        int[]? nums = new[] { 2, 3, 4, 3, 4 };
+        int expected = 4;
         Assert.AreEqual(expected, _solution.AlternatingSubarray(nums));
     }
 
     [TestMethod]
     public void InvalidCase()
     {
-        var nums = new[] { 21, 9, 5 };
+        int[]? nums = new[] { 21, 9, 5 };
         int expected = -1;
         Assert.AreEqual(expected, _solution.AlternatingSubarray(nums));
     }

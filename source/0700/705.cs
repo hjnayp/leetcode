@@ -4,11 +4,6 @@ public class MyHashSet
 {
     private const int BASE = 769;
 
-    private static int Hash(int key)
-    {
-        return key % BASE;
-    }
-
     private readonly List<List<int>> _data;
 
     public MyHashSet()
@@ -18,6 +13,11 @@ public class MyHashSet
         {
             _data.Add(new List<int>());
         }
+    }
+
+    private static int Hash(int key)
+    {
+        return key % BASE;
     }
 
     public void Add(int key)

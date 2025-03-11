@@ -11,9 +11,9 @@ public class Test2739
     public void Normal()
     {
         var solution = new Solution();
-        var mainTank = 5;
-        var additionTank = 10;
-        var expected = 60;
+        int mainTank = 5;
+        int additionTank = 10;
+        int expected = 60;
         Assert.AreEqual(expected, solution.DistanceTraveled(mainTank, additionTank));
     }
 
@@ -21,9 +21,9 @@ public class Test2739
     public void Normal2()
     {
         var solution = new Solution();
-        var mainTank = 1;
-        var additionTank = 2;
-        var expected = 10;
+        int mainTank = 1;
+        int additionTank = 2;
+        int expected = 10;
         Assert.AreEqual(expected, solution.DistanceTraveled(mainTank, additionTank));
     }
 
@@ -31,9 +31,9 @@ public class Test2739
     public void CostAdditionalTankAll()
     {
         var solution = new Solution();
-        var mainTank = 9;
-        var additionTank = 1;
-        var expected = 100;
+        int mainTank = 9;
+        int additionTank = 1;
+        int expected = 100;
         Assert.AreEqual(expected, solution.DistanceTraveled(mainTank, additionTank));
     }
 }

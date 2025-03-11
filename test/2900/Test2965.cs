@@ -13,7 +13,7 @@ public class Test2965
         int[][] grid = new[]
         {
             new[] { 1, 3 },
-            new[] { 2, 2 }
+            new[] { 2, 2 },
         };
         int[] expected = new[] { 2, 4 };
         int[] actual = new Solution().FindMissingAndRepeatedValues(grid);
@@ -23,7 +23,7 @@ public class Test2965
         {
             new[] { 9, 1, 7 },
             new[] { 8, 9, 2 },
-            new[] { 3, 4, 6 }
+            new[] { 3, 4, 6 },
         };
         expected = new[] { 9, 5 };
         actual = new Solution().FindMissingAndRepeatedValues(grid);

@@ -3,7 +3,8 @@ using source._0800._807;
 
 namespace test._0800;
 
-[TestClass, TestSubject(typeof(Solution))]
+[TestClass]
+[TestSubject(typeof(Solution))]
 public class Test807
 {
     [TestMethod]
