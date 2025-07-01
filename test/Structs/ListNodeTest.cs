@@ -10,9 +10,9 @@ public class ListNodeTest
     [TestMethod]
     public void TestConvertFromArray()
     {
-        ConvertArrayToListNode(new[] { 1, 2, 3 });
-        ConvertArrayToListNode(new[] { 0, 3, 5 });
-        ConvertArrayToListNode(Array.Empty<int>());
+        ConvertArrayToListNode([1, 2, 3]);
+        ConvertArrayToListNode([0, 3, 5]);
+        ConvertArrayToListNode([]);
     }
 
     [TestMethod]
