@@ -28,15 +28,15 @@ public class Solution
 
         freq.Add(cnt);
 
-        long ans = freq.Aggregate<int, long>(1, (current, f) => current * f % MOD);
+        long ans = freq.Aggregate<int, long>(1, (current, f) => current * f % MOD); // All length count
         if (freq.Count >= k) return (int)ans;
 
-        int[] g = new int[k];
+        int[] g = new int[k]; // g(i) is the sum for length from 0 to k-1
         Array.Fill(g, 1);
 
         foreach (int chCnt in freq)
         {
-            int[] f = new int[k];
+            int[] f = new int[k]; // f(j) is the count of length j str
             for (int j = 1; j < k; ++j)
             {
                 f[j] = g[j - 1];
