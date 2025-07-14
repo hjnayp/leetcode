@@ -1,0 +1,12 @@
+bin/
+obj/
+/packages/
+riderModule.iml
+/_ReSharper.Caches/
+.DS_Store
+.idea
+
+# user specified files
+leetcode.sln.DotSettings.user
+qodana.yaml
+TestLayout.cs
